@@ -1,11 +1,13 @@
 import { ButtonHTMLAttributes } from "react";
+import Link from "next/link";
 
-interface DoodleButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface DoodleButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "href"> {
   variant?: "nav" | "cta";
   children: React.ReactNode;
+  href?: string;
 }
 
-export function DoodleButton({ variant = "cta", children, className = "", ...props }: DoodleButtonProps) {
+export function DoodleButton({ variant = "cta", children, className = "", href, onClick, ...props }: DoodleButtonProps) {
   const baseClasses =
     "doodle-border doodle-shadow doodle-shadow-hover doodle-shadow-active bg-sw-blue text-white font-heading rounded-full";
 
@@ -20,9 +22,24 @@ export function DoodleButton({ variant = "cta", children, className = "", ...pro
     </svg>
   );
 
+  const classes = `${baseClasses} ${variantClasses[variant]} ${className}`.trim();
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        className={classes}
+        onClick={onClick}
+      >
+        {children}
+        {variant === "cta" && <ArrowIcon />}
+      </Link>
+    );
+  }
+
   return (
     <button
-      className={`${baseClasses} ${variantClasses[variant]} ${className}`.trim()}
+      className={classes}
       {...props}
     >
       {children}

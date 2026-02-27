@@ -7,7 +7,13 @@ import Link from "next/link";
 
 const SCROLL_THRESHOLD = 80;
 
-const CITIES = ["Bucharest", "Constanta", "Targu Jiu", "Cluj", "Oradea"];
+const CITIES: { name: string; href: string }[] = [
+  { name: "Bucharest", href: "/bucharest" },
+  { name: "Constanta", href: "/" },
+  { name: "Targu Jiu", href: "/" },
+  { name: "Cluj", href: "/" },
+  { name: "Oradea", href: "/" },
+];
 
 // Hand-drawn arrow SVG
 const DrawnArrow = ({ isOpen }: { isOpen: boolean }) => (
@@ -93,11 +99,11 @@ export function Navbar() {
                 
                 {CITIES.map((city, i) => (
                   <Link
-                    key={city}
-                    href={`#${city.toLowerCase().replace(" ", "-")}`}
+                    key={city.name}
+                    href={city.href}
                     className={`px-4 py-2 hover:bg-white border-2 border-transparent hover:border-black rounded-lg transition-all font-heading font-bold text-center group/item ${i % 2 === 0 ? 'hover:rotate-2' : 'hover:-rotate-2'}`}
                   >
-                    <span className="group-hover/item:marker-highlight">{city}</span>
+                    <span className="group-hover/item:marker-highlight">{city.name}</span>
                   </Link>
                 ))}
               </motion.div>
@@ -106,25 +112,25 @@ export function Navbar() {
         </div>
 
         {/* Past Events */}
-        <Link href="#past-events" className="relative group font-heading hover:-rotate-2 transition-transform inline-block">
+        <Link href="/#past-events" className="relative group font-heading hover:-rotate-2 transition-transform inline-block">
           <span className="relative z-10">Past Events</span>
           <SquigglyLine />
         </Link>
 
         {/* Contact */}
-        <Link href="#contact" className="relative group font-heading hover:-rotate-2 transition-transform inline-block">
+        <Link href="/contact" className="relative group font-heading hover:-rotate-2 transition-transform inline-block">
           <span className="relative z-10">Contact</span>
           <SquigglyLine />
         </Link>
 
         {/* Mentors */}
-        <Link href="#mentors" className="relative group font-heading hover:-rotate-2 transition-transform inline-block">
+        <Link href="/mentors" className="relative group font-heading hover:-rotate-2 transition-transform inline-block">
           <span className="relative z-10">Mentors</span>
           <SquigglyLine />
         </Link>
 
         {/* Host in Your City */}
-        <Link href="#host" className="relative font-heading text-sw-navy group inline-block">
+        <Link href="/host" className="relative font-heading text-sw-navy group inline-block">
           <div className="absolute inset-0 bg-sw-blue-washed border-2 border-black transform rotate-2 group-hover:rotate-6 transition-transform rounded-xl"></div>
           <div className="relative px-5 py-2 border-2 border-black bg-white rounded-xl transform -rotate-1 group-hover:-rotate-2 transition-transform shadow-[4px_4px_0px_black] group-hover:shadow-[6px_6px_0px_black] font-bold flex items-center gap-2">
             Host in Your City
@@ -135,7 +141,7 @@ export function Navbar() {
 
       {/* Get Tickets */}
       <div className="hidden md:flex items-center gap-4 z-50">
-        <DoodleButton variant="nav" className="hover:scale-105 transition-transform">Get Tickets</DoodleButton>
+        <DoodleButton variant="nav" href="/#past-events" className="hover:scale-105 transition-transform">Get Tickets</DoodleButton>
       </div>
 
       {/* Mobile Menu Toggle */}
@@ -204,12 +210,12 @@ export function Navbar() {
                 <div className="grid grid-cols-2 gap-3">
                   {CITIES.map((city, idx) => (
                     <Link
-                      key={city}
-                      href={`#${city.toLowerCase().replace(" ", "-")}`}
+                      key={city.name}
+                      href={city.href}
                       className={`px-3 py-2 bg-[#FEF9C3] border-2 border-black rounded-lg text-center shadow-[3px_3px_0px_black] active:shadow-[0px_0px_0px_black] active:translate-x-[3px] active:translate-y-[3px] transition-all ${idx % 2 === 0 ? "rotate-2" : "-rotate-2"}`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      {city}
+                      {city.name}
                     </Link>
                   ))}
                 </div>
@@ -218,7 +224,7 @@ export function Navbar() {
               <div className="h-0 border-b-[3px] border-dashed border-black/20 my-4 w-full" />
 
               <Link
-                href="#past-events"
+                href="/#past-events"
                 className="px-4 py-3 hover:bg-sw-blue-washed border-2 border-transparent hover:border-black rounded-xl transition-all font-heading text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -226,7 +232,7 @@ export function Navbar() {
               </Link>
 
               <Link
-                href="#contact"
+                href="/contact"
                 className="px-4 py-3 hover:bg-sw-blue-washed border-2 border-transparent hover:border-black rounded-xl transition-all font-heading text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -234,7 +240,7 @@ export function Navbar() {
               </Link>
 
               <Link
-                href="#mentors"
+                href="/mentors"
                 className="px-4 py-3 hover:bg-sw-blue-washed border-2 border-transparent hover:border-black rounded-xl transition-all font-heading text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -242,7 +248,7 @@ export function Navbar() {
               </Link>
               
               <Link
-                href="#host"
+                href="/host"
                 className="relative mt-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -255,7 +261,12 @@ export function Navbar() {
             </div>
 
             <div className="flex flex-col mt-4">
-              <DoodleButton variant="cta" className="w-full justify-center text-xl py-4" onClick={() => setIsMobileMenuOpen(false)}>
+              <DoodleButton
+                variant="cta"
+                href="/#past-events"
+                className="w-full justify-center text-xl py-4"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 Get Tickets
               </DoodleButton>
             </div>

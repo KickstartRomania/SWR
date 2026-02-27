@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const FooterCTASection = () => {
   return (
@@ -40,12 +41,12 @@ export const FooterCTASection = () => {
             At Startup Weekend developers, designers, marketers, and idea people come together to launch something real. Pitch on Friday, build all weekend, and demo your startup on Sunday.
           </p>
           
-          <button className="doodle-border doodle-shadow-active bg-white text-sw-blue font-heading font-bold text-2xl px-12 py-5 rounded-full inline-flex items-center gap-4 hover:bg-sw-blue-washed transition-colors group">
+          <Link href="/contact" className="doodle-border doodle-shadow-active bg-white text-sw-blue font-heading font-bold text-2xl px-12 py-5 rounded-full inline-flex items-center gap-4 hover:bg-sw-blue-washed transition-colors group">
             Contact us
             <svg className="w-8 h-8 group-hover:rotate-12 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
             </svg>
-          </button>
+          </Link>
 
         </div>
       </div>
