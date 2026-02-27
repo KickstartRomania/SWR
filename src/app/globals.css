@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FDFDFD; /* Paper White */
+  --foreground: #1A1A1B; /* Ink Black */
+  --sw-blue: #27A8E0;
+  --sw-blue-washed: #E1F3FA;
+  --sw-navy: #124F6B;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-sw-blue: var(--sw-blue);
+  --color-sw-blue-washed: var(--sw-blue-washed);
+  --color-sw-navy: var(--sw-navy);
+  
+  --font-heading: var(--font-fredoka), sans-serif;
+  --font-body: var(--font-dm-sans), sans-serif;
+  --font-hand: var(--font-caveat), cursive;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  /* A subtle paper grid */
+  background-image: 
+    linear-gradient(to right, rgba(26, 26, 27, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(26, 26, 27, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .doodle-border {
+    border: 3px solid var(--foreground);
+  }
+
+  .doodle-shadow {
+    box-shadow: 6px 6px 0px var(--foreground);
+  }
+  
+  .doodle-shadow-hover {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .doodle-shadow-hover:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px var(--foreground);
+  }
+
+  .doodle-shadow-active:active {
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0px var(--foreground);
+  }
+  
+  /* Sticker-style box for a single letter */
+  .sticker-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: var(--sw-blue-washed);
+    border: 3px solid var(--foreground);
+    border-radius: 6px 8px 6px 8px;
+    padding: 0.08em 0.2em;
+    margin-left: 0.05em;
+    transform: rotate(6deg);
+    box-shadow: 3px 3px 0px var(--foreground);
+    font-weight: inherit;
+  }
+
+  .sticker-box--yellow {
+    background: #FEF9C3;
+    transform: rotate(-4deg);
+    margin-right: 0.05em;
+    margin-left: 0.05em;
+  }
+
+  /* Background marker highlight effect */
+  .marker-highlight {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    color: white;
+    padding: 0 0.2em;
+  }
+  
+  .marker-highlight::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-2deg);
+    width: 105%;
+    height: 110%;
+    background-color: var(--sw-blue);
+    z-index: -1;
+    border-radius: 8px 12px 10px 8px;
+  }
+
+  /* Infinite Marquee */
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
 }

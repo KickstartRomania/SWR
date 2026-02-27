@@ -1,0 +1,10 @@
+export { HeroSection } from "./HeroSection";
+export { BentoStatsSection } from "./BentoStatsSection";
+export { PartnersMarqueeSection } from "./PartnersMarqueeSection";
+export { EventsSection } from "./EventsSection";
+export { WhatIsStartupWeekendSection } from "./WhatIsStartupWeekendSection";
+export { HowItWorksSection } from "./HowItWorksSection";
+export { BenefitsSection } from "./BenefitsSection";
+export { TestimonialsSection } from "./TestimonialsSection";
+export { FAQSection } from "./FAQSection";
+export { FooterCTASection } from "./FooterCTASection";
