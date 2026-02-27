@@ -1,19 +1,28 @@
 import Image from "next/image";
 import { DoodleButton } from "@/components/DoodleButton";
+import { Sticker } from "@/components/Sticker";
 
 export function HeroSection() {
   return (
     <section className="relative w-full max-w-7xl mx-auto px-6 pt-16 pb-24 md:py-32 flex flex-col items-center text-center">
       {/* Floating Doodles & Images */}
-      <div className="absolute top-10 -left-10 md:-left-18 rotate-[-12deg] w-24 h-24 md:w-60 md:h-60 pointer-events-none opacity-90 hidden sm:block">
-        <Image 
-          src="/images/falling.png" 
-          alt="Falling character doodle" 
-          fill 
-          className="object-contain"
-          priority
-        />
-      </div>
+      <Sticker
+        src="/images/falling.png"
+        alt="Falling character doodle"
+        width={240}
+        height={240}
+        className="top-10 -left-10 md:-left-18 hidden sm:block z-20"
+        initialRotate={-12}
+      />
+      
+      <Sticker
+        src="/images/group-doodle.png"
+        alt="Group doodle"
+        width={200}
+        height={200}
+        className="bottom-10 -right-4 md:right-10 hidden lg:block z-20"
+        initialRotate={8}
+      />
       <div className="absolute top-32 right-10 md:right-24 rotate-[15deg] hidden lg:block text-sw-blue opacity-80 pointer-events-none">
         <svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round">
           <path d="M50 10 L50 90 M10 50 L90 50 M25 25 L75 75 M25 75 L75 25" />

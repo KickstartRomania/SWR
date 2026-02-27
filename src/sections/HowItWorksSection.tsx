@@ -1,3 +1,100 @@
+"use client";
+
+import { motion, useScroll, useTransform, useSpring, useInView } from "framer-motion";
+import { useRef } from "react";
+
+const StepCard = ({ step, index, isEven }: { step: any, index: number, isEven: boolean }) => {
+  const cardRef = useRef(null);
+  const isInView = useInView(cardRef, { once: false, margin: "-20% 0px -20% 0px" });
+
+  return (
+    <div key={step.id} className={`flex flex-col md:flex-row items-center w-full ${isEven ? 'md:flex-row-reverse' : ''}`}>
+      
+      {/* Empty space for alternating layout */}
+      <div className="hidden md:block md:w-1/2"></div>
+      
+      {/* Center Node (Number) */}
+      <motion.div 
+        initial={{ scale: 0, rotate: -180 }}
+        animate={isInView ? { scale: 1, rotate: -5 } : { scale: 0, rotate: -180 }}
+        transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.1 }}
+        whileHover={{ rotate: 0, scale: 1.1 }}
+        className="md:absolute left-1/2 md:-translate-x-1/2 flex items-center justify-center w-16 h-16 rounded-full bg-white doodle-border doodle-shadow z-20 mb-6 md:mb-0"
+      >
+        <span className="font-heading font-black text-2xl">{step.id}</span>
+      </motion.div>
+
+      {/* Card Content */}
+      <div className={`w-full md:w-1/2 ${isEven ? 'md:pr-16 lg:pr-24' : 'md:pl-16 lg:pl-24'}`}>
+        <motion.div 
+          ref={cardRef}
+          initial={{ 
+            opacity: 0, 
+            x: isEven ? -50 : 50,
+            y: 50,
+            rotate: isEven ? -5 : 5
+          }}
+          animate={isInView ? { 
+            opacity: 1, 
+            x: 0,
+            y: 0,
+            rotate: 0
+          } : { 
+            opacity: 0, 
+            x: isEven ? -50 : 50,
+            y: 50,
+            rotate: isEven ? -5 : 5
+          }}
+          transition={{ 
+            type: "spring", 
+            stiffness: 100, 
+            damping: 12,
+            mass: 1,
+            delay: 0.2
+          }}
+          className={`doodle-border doodle-shadow-hover rounded-3xl p-8 relative group ${step.color} ${step.textColor || 'text-foreground'}`}
+        >
+          
+          {/* Decorative icon background */}
+          <motion.div 
+            animate={isInView ? { 
+              scale: [1, 1.2, 1],
+              rotate: [0, 15, 0]
+            } : {}}
+            transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+            className="absolute top-6 right-6 opacity-20 group-hover:opacity-40 transition-opacity"
+          >
+            {step.icon}
+          </motion.div>
+
+          <span className="font-hand text-xl opacity-80 mb-2 block">Step {step.id}</span>
+          <h3 className="font-heading font-bold text-3xl mb-4 leading-tight">{step.title}</h3>
+          <p className={`font-medium mb-8 leading-relaxed opacity-90`}>
+            {step.description}
+          </p>
+
+          <div className="flex flex-wrap gap-2">
+            {step.tags.map((tag: string, i: number) => (
+              <motion.span 
+                key={tag} 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                transition={{ delay: 0.3 + (i * 0.1), type: "spring" }}
+                whileHover={{ y: -2, scale: 1.05 }}
+                className={`text-sm font-bold px-3 py-1 rounded-full border-2 border-current bg-white/20 backdrop-blur-sm cursor-default`}
+              >
+                {tag}
+              </motion.span>
+            ))}
+          </div>
+
+        </motion.div>
+      </div>
+
+    </div>
+  );
+};
+
 export const HowItWorksSection = () => {
   const steps = [
     {
@@ -96,11 +193,48 @@ export const HowItWorksSection = () => {
   return (
     <section className="w-full bg-[#fcfcfc] py-24 md:py-32 relative overflow-hidden">
       
-      {/* Background doodles */}
-      <div className="absolute top-20 left-10 text-foreground/5 pointer-events-none">
-        <svg width="200" height="200" viewBox="0 0 100 100" fill="currentColor">
-          <path d="M50 10 C 20 20, 10 50, 20 80 C 50 90, 80 80, 90 50 C 90 20, 60 10, 50 10 Z" />
-        </svg>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden flex items-center justify-center z-0">
+        {/* Subtle dot grid fading out at the edges */}
+        <div className="absolute inset-0 bg-[radial-gradient(#1A1A1B_1px,transparent_1px)] [background-size:40px_40px] opacity-[0.03] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_70%)]"></div>
+        
+        {/* Floating Shapes */}
+        <div className="absolute top-[10%] left-[5%] text-sw-blue/10 animate-float-slow hidden md:block">
+          <svg width="120" height="120" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M45.7,96.5c-24.6,0-44.5-19.9-44.5-44.5S21.1,7.5,45.7,7.5s44.5,19.9,44.5,44.5S70.3,96.5,45.7,96.5z"/>
+          </svg>
+        </div>
+
+        <div className="absolute top-[20%] right-[10%] text-[#FFD166]/20 animate-float-delayed">
+          <svg width="80" height="80" viewBox="0 0 100 100" fill="currentColor" className="animate-spin-slow origin-center">
+            <polygon points="50,15 90,85 10,85" strokeLinejoin="round" />
+          </svg>
+        </div>
+
+        <div className="absolute top-[45%] left-[10%] text-[#EF476F]/15 animate-pulse-slow hidden lg:block">
+          <svg width="160" height="160" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3">
+            <circle cx="50" cy="50" r="40" strokeDasharray="8 8" />
+          </svg>
+        </div>
+
+        <div className="absolute top-[65%] right-[5%] text-[#06D6A0]/20 animate-float-medium">
+          <svg width="90" height="90" viewBox="0 0 100 100" fill="currentColor" className="rotate-12">
+            <rect x="25" y="25" width="50" height="50" rx="8" />
+          </svg>
+        </div>
+
+        <div className="absolute bottom-[10%] left-[15%] text-sw-navy/10 animate-float-fast">
+          <svg width="70" height="70" viewBox="0 0 100 100" fill="currentColor" className="animate-spin-slow origin-center">
+            <path d="M40,10 h20 v30 h30 v20 h-30 v30 h-20 v-30 h-30 v-20 h30 z" />
+          </svg>
+        </div>
+        
+        <div className="absolute bottom-[25%] right-[15%] text-foreground/10 animate-float-slow hidden md:block">
+          <svg width="140" height="140" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3">
+            <path d="M10,40 Q25,10 50,40 T90,40" strokeLinecap="round" />
+            <path d="M10,60 Q25,30 50,60 T90,60" strokeLinecap="round" />
+          </svg>
+        </div>
       </div>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">

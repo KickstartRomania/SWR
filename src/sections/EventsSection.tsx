@@ -1,103 +1,121 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export function EventsSection() {
+  const tickets = [
+    {
+      city: "Bucharest",
+      date: "18-20",
+      month: "Oct",
+      color: "bg-sw-blue",
+      rotation: -6,
+      xOffset: -40,
+      yOffset: 20,
+      initialX: 20,
+      initialY: 15,
+      initialRotate: 0,
+    },
+    {
+      city: "Târgu Jiu",
+      date: "18-20",
+      month: "Oct",
+      color: "bg-sw-navy",
+      rotation: 8,
+      xOffset: 40,
+      yOffset: -10,
+      initialX: -80,
+      initialY: -15,
+      initialRotate: 0,
+    }
+  ];
+
   return (
-    <section className="w-full bg-sw-blue-washed py-24 px-6 relative">
-      <div className="max-w-6xl mx-auto">
+    <section className="w-full bg-sw-blue-washed py-32 px-6 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto">
         
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 relative">
-          <h2 className="font-heading font-bold text-5xl md:text-6xl max-w-lg leading-[1.1]">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-6 relative z-30">
+          <h2 className="font-heading font-bold text-5xl md:text-7xl max-w-2xl leading-[1.1]">
             Join our<br/>
             <span className="relative">
               next events
-              <svg className="absolute -bottom-3 left-0 w-full h-4 text-sw-blue" viewBox="0 0 200 12" fill="none" preserveAspectRatio="none">
+              <svg className="absolute -bottom-4 left-0 w-full h-5 text-sw-blue" viewBox="0 0 200 12" fill="none" preserveAspectRatio="none">
                 <path d="M2 9.5C40 -2 150 -2 198 9.5" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
               </svg>
             </span>
           </h2>
 
           <div className="hidden md:block absolute right-32 -top-10">
-             <p className="font-hand text-2xl text-sw-navy rotate-12 mb-2">Get yours now!</p>
-             <svg width="40" height="40" viewBox="0 0 50 50" fill="none" className=" absolute left-10  top-10">
-               <path d="M45 5C45 5 30 20 10 35M10 35L25 35M10 35L15 20" stroke="#124F6B" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-             </svg>
+             <p className="font-hand text-3xl text-sw-navy rotate-12">Get yours now!</p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-0 mt-10">
           
-          {/* Ticket 1: Bucharest */}
-          <div className="relative group">
-            <div className="doodle-border doodle-shadow bg-white rounded-3xl overflow-hidden flex flex-col sm:flex-row relative z-10 transition-transform duration-300 group-hover:-translate-y-2">
-              
-              <div className="bg-sw-blue text-white p-8 flex flex-col justify-center items-center sm:w-1/3 relative border-b-4 sm:border-b-0 sm:border-r-4 border-dashed border-foreground/30">
-                 <div className="absolute top-[-10px] left-1/2 sm:left-auto sm:top-1/2 sm:right-[-10px] w-5 h-5 bg-sw-blue-washed rounded-full border-b-[3px] sm:border-b-0 sm:border-l-[3px] border-foreground -translate-x-1/2 sm:translate-x-0 sm:-translate-y-1/2 z-20"></div>
-                 <div className="absolute bottom-[-10px] left-1/2 sm:left-auto sm:bottom-1/2 sm:right-[-10px] w-5 h-5 bg-sw-blue-washed rounded-full border-t-[3px] sm:border-t-0 sm:border-l-[3px] border-foreground -translate-x-1/2 sm:translate-x-0 sm:translate-y-1/2 z-20 hidden sm:block"></div>
-                 
-                 <span className="font-heading font-bold text-5xl tracking-tighter mb-1">18-20</span>
-                 <span className="font-heading font-semibold text-2xl uppercase tracking-widest">Oct</span>
-              </div>
-
-              <div className="p-8 sm:w-2/3 flex flex-col justify-between relative bg-[#fdfdfd]">
-                <div>
-                  <h3 className="font-heading font-bold text-4xl mb-2 group-hover:text-sw-blue transition-colors">Bucharest</h3>
-                  <div className="flex items-center gap-2 text-foreground/70 font-medium text-lg">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                    Builders House
-                  </div>
-                </div>
+          {tickets.map((ticket, index) => (
+            <motion.div 
+              key={ticket.city}
+              initial={{ rotate: ticket.initialRotate ?? 0, x: ticket.initialX ?? 0, y: ticket.initialY ?? 0, scale: 0.92 }}
+              whileInView={{ 
+                rotate: ticket.rotation, 
+                x: ticket.xOffset, 
+                y: ticket.yOffset,
+                scale: 1
+              }}
+              whileHover={{ scale: 1.02, zIndex: 40 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ type: "spring", bounce: 0.6, duration: 1.4, delay: index * 0.12 }}
+              className={`md:relative w-full max-w-3xl ${index > 0 ? 'md:-ml-56 z-20' : 'z-10'}`}
+            >
+              <div className="doodle-border doodle-shadow bg-white rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row relative group cursor-pointer w-full h-full">
                 
-                <div className="mt-8 flex justify-end">
-                  <button className="doodle-border doodle-shadow-active bg-sw-blue text-white font-heading font-semibold px-6 py-3 rounded-full hover:bg-sw-navy transition-colors">
-                    Join now
-                  </button>
+                {/* Stub (Left Side) */}
+                <div className={`${ticket.color} text-white p-10 flex flex-col justify-center items-center md:w-[32%] relative border-b-4 md:border-b-0 md:border-r-[4px] border-dashed border-foreground/30`}>
+                   {/* Top Cutout */}
+                   <div className="absolute top-[-24px] right-[-24px] w-12 h-12 bg-sw-blue-washed rounded-full border-[3px] border-foreground z-20 hidden md:block"></div>
+                   {/* Bottom Cutout */}
+                   <div className="absolute bottom-[-24px] right-[-24px] w-12 h-12 bg-sw-blue-washed rounded-full border-[3px] border-foreground z-20 hidden md:block"></div>
+                   
+                   <span className="font-heading font-black text-7xl md:text-8xl tracking-tighter mb-2">{ticket.date}</span>
+                   <span className="font-heading font-bold text-3xl md:text-4xl uppercase tracking-widest">{ticket.month}</span>
                 </div>
 
-                <svg className="absolute right-4 top-4 text-foreground/5 w-24 h-24 pointer-events-none" viewBox="0 0 100 100" fill="currentColor">
-                  <path d="M50 0L60 40L100 50L60 60L50 100L40 60L0 50L40 40Z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          {/* Ticket 2: Targu Jiu */}
-          <div className="relative group">
-            <div className="doodle-border doodle-shadow bg-white rounded-3xl overflow-hidden flex flex-col sm:flex-row relative z-10 transition-transform duration-300 group-hover:-translate-y-2">
-              
-              <div className="bg-sw-navy text-white p-8 flex flex-col justify-center items-center sm:w-1/3 relative border-b-4 sm:border-b-0 sm:border-r-4 border-dashed border-foreground/30">
-                 <div className="absolute top-[-10px] left-1/2 sm:left-auto sm:top-1/2 sm:right-[-10px] w-5 h-5 bg-sw-blue-washed rounded-full border-b-[3px] sm:border-b-0 sm:border-l-[3px] border-foreground -translate-x-1/2 sm:translate-x-0 sm:-translate-y-1/2 z-20"></div>
-                 <div className="absolute bottom-[-10px] left-1/2 sm:left-auto sm:bottom-1/2 sm:right-[-10px] w-5 h-5 bg-sw-blue-washed rounded-full border-t-[3px] sm:border-t-0 sm:border-l-[3px] border-foreground -translate-x-1/2 sm:translate-x-0 sm:translate-y-1/2 z-20 hidden sm:block"></div>
-                 
-                 <span className="font-heading font-bold text-5xl tracking-tighter mb-1">18-20</span>
-                 <span className="font-heading font-semibold text-2xl uppercase tracking-widest">Oct</span>
-              </div>
-
-              <div className="p-8 sm:w-2/3 flex flex-col justify-between relative bg-[#fdfdfd]">
-                <div>
-                  <h3 className="font-heading font-bold text-4xl mb-2 group-hover:text-sw-blue transition-colors">Târgu Jiu</h3>
-                  <div className="flex items-center gap-2 text-foreground/70 font-medium text-lg">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                    Builders House
+                {/* Main Content (Right Side) */}
+                <div className="p-10 md:p-14 md:w-[68%] flex flex-col justify-between relative bg-[#fdfdfd]">
+                  <div className="flex justify-between items-start mb-16">
+                    <div>
+                      <h3 className="font-heading font-black text-5xl md:text-6xl mb-4">{ticket.city}</h3>
+                      <div className="flex items-center gap-3 text-foreground/70 font-medium text-xl md:text-2xl">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                          <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        Builders House
+                      </div>
+                    </div>
+                    {/* Fake QR / Logo block */}
+                    <div className="w-20 h-20 border-[3px] border-foreground rounded-2xl opacity-10 p-1.5 flex flex-wrap gap-1.5 hidden sm:flex">
+                       <div className="w-4 h-4 bg-foreground rounded-sm"></div>
+                       <div className="w-4 h-4 bg-foreground rounded-sm"></div>
+                       <div className="w-4 h-4 bg-foreground rounded-sm"></div>
+                       <div className="w-4 h-4 bg-foreground rounded-sm"></div>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="mt-8 flex justify-end">
-                  <button className="doodle-border doodle-shadow-active bg-sw-blue text-white font-heading font-semibold px-6 py-3 rounded-full hover:bg-sw-navy transition-colors">
-                    Join now
-                  </button>
-                </div>
+                  
+                  <div className="mt-auto flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6">
+                    <div className="font-mono text-foreground/40 font-bold text-xl tracking-wider">
+                      GENERAL<br/>ADMISSION
+                    </div>
+                    <button className="doodle-border doodle-shadow-active bg-sw-blue text-white font-heading font-bold text-2xl px-10 py-4 rounded-full hover:bg-sw-navy hover:scale-105 transition-all w-full sm:w-auto">
+                      Join now
+                    </button>
+                  </div>
 
-                <svg className="absolute right-4 top-4 text-foreground/5 w-24 h-24 pointer-events-none" viewBox="0 0 100 100" fill="currentColor">
-                  <path d="M50 0L60 40L100 50L60 60L50 100L40 60L0 50L40 40Z" />
-                </svg>
+                </div>
               </div>
-            </div>
-          </div>
-
+            </motion.div>
+          ))}
+          
         </div>
       </div>
     </section>

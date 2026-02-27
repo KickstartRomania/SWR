@@ -1,25 +1,36 @@
+import Image from "next/image";
+
 export const BenefitsSection = () => {
   const benefits = [
     {
       title: "Expert mentors",
+      image: "/images/expert-mentors.png",
       cta: "Join the next events",
       color: "bg-[#FFD166]",
+      textColor: "text-sw-navy",
+      ctaColor: "text-sw-navy hover:border-sw-navy",
       rotation: "rotate-[-2deg]",
       tapeRotation: "rotate-[-10deg]",
       tapeRight: true,
     },
     {
       title: "Hands-on workshops",
+      image: "/images/workshops.png",
       cta: "Join the next events",
       color: "bg-sw-blue-washed",
+      textColor: "text-sw-navy",
+      ctaColor: "text-sw-navy hover:border-sw-navy",
       rotation: "rotate-[3deg]",
       tapeRotation: "rotate-[15deg]",
       tapeRight: false,
     },
     {
       title: "Startup community",
+      image: "/images/startup-community.png",
       cta: "Join the next events",
       color: "bg-[#EF476F]",
+      textColor: "text-white",
+      ctaColor: "text-white hover:border-white",
       rotation: "rotate-[-1deg]",
       tapeRotation: "rotate-[5deg]",
       tapeRight: true,
@@ -63,24 +74,24 @@ export const BenefitsSection = () => {
               ></div>
 
               {/* Polaroid Card */}
-              <div className={`doodle-border doodle-shadow p-4 pb-6 bg-white ${benefit.rotation} hover:rotate-0 transition-transform duration-300 group`}>
+              <div className={`doodle-border doodle-shadow p-4 pb-6 ${benefit.color} ${benefit.rotation} hover:rotate-0 transition-transform duration-300 group`}>
                 
-                {/* Photo Placeholder */}
-                <div className={`w-full aspect-square md:aspect-[4/3] ${benefit.color} doodle-border rounded-lg mb-6 overflow-hidden relative`}>
-                   {/* Abstract shape for placeholder */}
-                   <div className="absolute inset-0 opacity-20 mix-blend-multiply flex items-center justify-center">
-                     <svg viewBox="0 0 100 100" className="w-3/4 h-3/4 animate-pulse">
-                        <circle cx="50" cy="50" r="40" fill="currentColor" />
-                     </svg>
-                   </div>
+                {/* Photo */}
+                <div className={`w-full aspect-square md:aspect-[4/3] doodle-border rounded-lg mb-6 overflow-hidden relative`}>
+                  <Image
+                    src={benefit.image}
+                    alt={benefit.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
 
-                <h3 className="font-heading font-bold text-3xl mb-4 text-center">
+                <h3 className={`font-heading font-bold text-3xl mb-4 text-center ${benefit.textColor}`}>
                   {benefit.title}
                 </h3>
                 
                 <div className="flex justify-center">
-                  <a href="#" className="font-hand text-xl text-sw-blue border-b-2 border-transparent hover:border-sw-blue transition-colors flex items-center gap-2">
+                  <a href="#" className={`font-hand text-xl border-b-2 border-transparent transition-colors flex items-center gap-2 ${benefit.ctaColor}`}>
                     {benefit.cta}
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M5 12h14M12 5l7 7-7 7"/>
