@@ -149,7 +149,7 @@ export function CustomSelect({
         </span>
       </button>
 
-      {createPortal(
+      {typeof document !== "undefined" && createPortal(
         <AnimatePresence>
           {isOpen && (
             <motion.ul
