@@ -20,15 +20,6 @@ export function WhatIsStartupWeekendSection() {
           <p className="font-medium text-lg md:text-xl text-foreground/80 leading-relaxed mb-10 max-w-lg">
             Startup Weekend Romania is an electrifying 54-hour hackathon-style sprint where startup enthusiasts (from developers to creatives) pitch ideas, form teams, and build their first minimum viable product.
           </p>
-
-          <div>
-            <button className="doodle-border doodle-shadow doodle-shadow-hover doodle-shadow-active bg-white text-foreground font-heading font-bold text-xl px-8 py-4 rounded-full inline-flex items-center gap-3 group">
-              Learn more
-              <svg className="group-hover:translate-x-1 transition-transform" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </button>
-          </div>
         </div>
 
         {/* Right Collage / Sticky Note Side */}

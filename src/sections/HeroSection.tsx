@@ -142,7 +142,7 @@ export function HeroSection() {
           variants={itemVariants}
           className="mt-12 relative"
         >
-          <DoodleButton variant="cta">Join the vibe</DoodleButton>
+          <DoodleButton variant="cta" href="#past-events">Join the vibe</DoodleButton>
         </motion.div>
 
         {/* Wavy line separator */}
