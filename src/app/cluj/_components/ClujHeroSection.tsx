@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { DoodleButton } from "@/components/DoodleButton";
 import Image from "next/image";
-export function BucharestHeroSection() {
+export function ClujHeroSection() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -76,7 +76,7 @@ export function BucharestHeroSection() {
         transition={{ type: "spring", delay: 1.5, stiffness: 200 }}
         className="absolute top-6 left-4 md:top-24 md:left-12 w-20 h-20 md:w-50 md:h-50 flex items-center justify-center z-20 overflow-hidden pointer-events-none"
       >
-        <Image src="/stickers/rocket.png" alt="Sticker 1" width={250} height={100} className="object-contain w-full h-full" />
+        <Image src="/stickers/go.png" alt="Sticker 1" width={250} height={100} className="object-contain w-full h-full" />
       </motion.div>
 
       {/* Sticker 2: Top Right */}
@@ -84,9 +84,9 @@ export function BucharestHeroSection() {
         initial={{ opacity: 0, scale: 0, rotate: 45 }}
         animate={{ opacity: 1, scale: 1, rotate: 15 }}
         transition={{ type: "spring", delay: 1.7, stiffness: 200 }}
-        className="absolute top-6 right-4 md:top-32 md:right-16 w-20 h-20 md:w-28 md:h-28 bg-gray-100/90 border-2 border-dashed border-gray-400 rounded-full flex items-center justify-center z-20 shadow-sm backdrop-blur-sm pointer-events-none"
+        className="absolute top-6 right-4 md:top-32 md:right-16 w-20 h-20 md:w-28 md:h-28 flex items-center justify-center z-20 pointer-events-none"
       >
-        <Image src="/stickers/smiley.png" alt="Sticker 1" width={250} height={100} className="object-contain w-full h-full" />
+        <Image src="/stickers/hammer-cogwheel.png" alt="Sticker 1" width={250} height={100} className="object-contain w-full h-full" />
       </motion.div>
 
       {/* Sticker 3: Bottom Left */}
@@ -106,7 +106,7 @@ export function BucharestHeroSection() {
         transition={{ type: "spring", delay: 2.1, stiffness: 200 }}
         className="absolute bottom-6 right-4 md:bottom-24 md:right-40 w-20 h-20 md:w-50 md:h-40 flex items-center justify-center z-20 pointer-events-none"
       >
-        <Image src="/stickers/pbp.png" alt="Sticker 1" width={250} height={100} className="object-contain w-full h-full" />
+        <Image src="/stickers/rocket-round.png" alt="Sticker 1" width={250} height={100} className="object-contain w-full h-full" />
       </motion.div>
 
       <motion.div
@@ -116,7 +116,7 @@ export function BucharestHeroSection() {
         className="flex flex-col items-center z-10 w-full"
       >
         <motion.span variants={itemVariants} className="font-hand text-2xl md:text-3xl text-sw-blue mb-4 rotate-[-2deg]">
-          Next event: 28-30 Oct
+          Next event: 5-7 Dec
         </motion.span>
 
         <h1 className="font-heading font-bold text-5xl md:text-7xl lg:text-8xl leading-[1.1] md:leading-[1.1] tracking-tight max-w-4xl relative z-10">
@@ -141,7 +141,7 @@ export function BucharestHeroSection() {
                 transition={{ duration: 0.3, delay: 0.8 }}
                 className="inline-block"
               >
-                BUCHAREST
+                CLUJ-NAPOCA
               </motion.span>
             </span>
           </motion.div>
@@ -165,7 +165,7 @@ export function BucharestHeroSection() {
           variants={textBlurVariants}
           className="mt-8 font-medium text-lg md:text-xl text-foreground/80 max-w-2xl leading-relaxed"
         >
-          Join the vibe. At Bucharest Startup Weekend developers, designers, marketers, and idea people come together to launch something real.
+          Join the vibe. At Cluj-Napoca Startup Weekend developers, designers, marketers, and idea people come together to launch something real.
         </motion.p>
 
         <motion.div

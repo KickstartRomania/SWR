@@ -23,6 +23,9 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   title: "Startup Weekend Romania",
   description: "Build a startup in 54 hours. No prior experience required! Only good vibes and a lot of fun!",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

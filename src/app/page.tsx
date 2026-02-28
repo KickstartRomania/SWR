@@ -10,6 +10,7 @@ import {
   TestimonialsSection,
   FAQSection,
   FooterCTASection,
+  Footer,
 } from "@/sections";
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
       <TestimonialsSection />
       <FAQSection />
       <FooterCTASection />
+      <Footer />
       
     </div>
   );

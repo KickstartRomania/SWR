@@ -8,10 +8,10 @@ const agenda = {
     { time: "17:30 - 18:00", title: "Registration", description: "Arrive at the venue and get checked in" },
     { time: "18:00 - 18:30", title: "Dinner & networking", description: "Eat food, share ideas, practice pitches, and get to know your fellow participants" },
     { time: "18:30 - 19:00", title: "Welcome", description: "Meet our Techstars facilitator and review agenda for the weekend" },
-    { time: "19:00 - 20:00", title: "Pitches", description: "Facilitator gives a walk-through of the pitching process and then pitches begin! Optionally line up to give your pitch" },
+    { time: "19:00 - 20:00", title: "Pitches", description: "Facilitator gives a walk-through of the pitching process and then pitches begin!" },
     { time: "20:00 - 21:00", title: "Vote for top pitches and form teams", description: "Network, share questions, vote for the top pitches and form teams" },
-    { time: "21:00 - 21:30", title: "Workshop: From Idea to Reality", description: "Learn how to validate your idea and start building" },
-    { time: "21:30 - 00:00", title: "Start building!", description: "Set up your team workspace for the weekend and start work on the idea. You may stay as late as the venue will allow" },
+    { time: "21:00 - 21:30", title: "Workshop: Lean Startup Methodology", description: "Introduction to building a startup the lean way" },
+    { time: "21:30 - 00:00", title: "Start building!", description: "Set up your team workspace for the weekend and start work on the idea" },
   ],
   Saturday: [
     { time: "09:00 - 10:00", title: "Breakfast", description: "Arrive, have breakfast, and get ready for the day" },
@@ -32,7 +32,7 @@ const agenda = {
   ],
 };
 
-export function BucharestAgendaSection() {
+export function ClujAgendaSection() {
   const [activeTab, setActiveTab] = useState<keyof typeof agenda>("Friday");
 
   return (
@@ -71,7 +71,7 @@ export function BucharestAgendaSection() {
                 <h2 className="font-hand font-bold text-5xl md:text-6xl mb-2 text-sw-blue tracking-wider transform -rotate-2 inline-block">
                   AGENDA
                 </h2>
-                <p className="font-hand text-2xl text-foreground/70 transform -rotate-1">How things will probably work...</p>
+                <p className="font-hand text-2xl text-foreground/70 transform -rotate-1">How things will probably work</p>
               </motion.div>
             </div>
 

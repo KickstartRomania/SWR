@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
-import { FooterCTASection } from "@/sections";
+import { FooterCTASection, Footer } from "@/sections";
 
 const mentors = [
   {
@@ -145,6 +145,7 @@ export default function MentorsPage() {
       </main>
 
       <FooterCTASection />
+      <Footer />
     </div>
   );
 }

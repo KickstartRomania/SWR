@@ -1,15 +1,16 @@
 import { ButtonHTMLAttributes } from "react";
 import Link from "next/link";
 
-interface DoodleButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "href"> {
+interface DoodleButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "href" | "onClick"> {
   variant?: "nav" | "cta";
   children: React.ReactNode;
   href?: string;
+  onClick?: React.MouseEventHandler<HTMLElement>;
 }
 
 export function DoodleButton({ variant = "cta", children, className = "", href, onClick, ...props }: DoodleButtonProps) {
   const baseClasses =
-    "doodle-border doodle-shadow doodle-shadow-hover doodle-shadow-active bg-sw-blue text-white font-heading rounded-full";
+    "doodle-border doodle-shadow doodle-shadow-hover doodle-shadow-active bg-sw-blue text-white font-heading rounded-full cursor-pointer";
 
   const variantClasses = {
     nav: "hidden md:block font-semibold px-6 py-2",

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { DoodleButton } from "@/components/DoodleButton";
 
-export function BucharestContactSection() {
+export function ConstantaContactSection() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -19,7 +19,6 @@ export function BucharestContactSection() {
 
   return (
     <section className="w-full bg-sw-blue py-24 relative overflow-hidden text-white">
-      {/* Decorative background doodles */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.2 }}
@@ -65,7 +64,7 @@ export function BucharestContactSection() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 Email
               </h3>
-              <p className="text-lg hover:text-yellow-100 transition-colors cursor-pointer inline-block">bucharest@startupweekend.ro</p>
+              <p className="text-lg hover:text-yellow-100 transition-colors cursor-pointer inline-block">constanta@startupweekend.ro</p>
             </motion.div>
 
             <motion.div variants={itemVariants}>
@@ -81,7 +80,7 @@ export function BucharestContactSection() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                 Location
               </h3>
-              <p className="text-lg">Builders House, Bucharest</p>
+              <p className="text-lg">Constanta Venue, Constanta</p>
             </motion.div>
 
             <motion.div variants={itemVariants}>
@@ -113,7 +112,6 @@ export function BucharestContactSection() {
           transition={{ type: "spring", stiffness: 80, delay: 0.3 }}
           className="bg-white text-foreground p-8 rounded-3xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative"
         >
-          {/* Decorative star on the box */}
           <svg className="absolute -top-6 -right-6 text-yellow-400 w-16 h-16 animate-pulse-slow" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
           </svg>

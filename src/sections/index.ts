@@ -8,3 +8,4 @@ export { BenefitsSection } from "./BenefitsSection";
 export { TestimonialsSection } from "./TestimonialsSection";
 export { FAQSection } from "./FAQSection";
 export { FooterCTASection } from "./FooterCTASection";
+export { Footer } from "./Footer";

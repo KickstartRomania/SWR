@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { DoodleButton } from "@/components/DoodleButton";
-import { FooterCTASection } from "@/sections";
+import { FooterCTASection, Footer } from "@/sections";
 
 export default function ContactPage() {
   const containerVariants = {
@@ -197,6 +197,7 @@ export default function ContactPage() {
       </main>
 
       <FooterCTASection />
+      <Footer />
     </div>
   );
 }

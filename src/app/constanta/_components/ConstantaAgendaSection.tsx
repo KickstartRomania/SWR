@@ -14,25 +14,14 @@ const agenda = {
     { time: "21:30 - 00:00", title: "Start building!", description: "Set up your team workspace for the weekend and start work on the idea. You may stay as late as the venue will allow" },
   ],
   Saturday: [
-    { time: "09:00 - 10:00", title: "Breakfast", description: "Arrive, have breakfast, and get ready for the day" },
-    { time: "10:00 - 12:00", title: "Work with your team", description: "Continue working on your prototype and validation" },
-    { time: "12:00 - 13:00", title: "Lunch", description: "Grab a bite and network with other teams" },
-    { time: "13:00 - 18:00", title: "Mentorship sessions", description: "Mentors will circulate to help you with your challenges" },
-    { time: "18:00 - 19:00", title: "Dinner", description: "Refuel for the evening" },
-    { time: "19:00 - 00:00", title: "Keep building", description: "Work as late as you need to get your MVP ready" },
+    { time: "TBA", title: "Schedule coming soon", description: "Stay tuned for the full Saturday program" },
   ],
   Sunday: [
-    { time: "09:00 - 10:00", title: "Breakfast", description: "Final day begins!" },
-    { time: "10:00 - 12:00", title: "Pitch prep", description: "Work on your final presentation and pitch" },
-    { time: "12:00 - 13:00", title: "Lunch", description: "Last meal before the big pitches" },
-    { time: "13:00 - 15:00", title: "Tech check", description: "Test your slides and demo on the main stage" },
-    { time: "15:00 - 17:00", title: "Final Presentations", description: "Pitch your startup to the judges" },
-    { time: "17:00 - 18:00", title: "Judging & Awards", description: "Judges deliberate and winners are announced" },
-    { time: "18:00 - 20:00", title: "Wrap-up Party", description: "Celebrate with your new friends and network" },
+    { time: "TBA", title: "Schedule coming soon", description: "Stay tuned for the full Sunday program" },
   ],
 };
 
-export function BucharestAgendaSection() {
+export function ConstantaAgendaSection() {
   const [activeTab, setActiveTab] = useState<keyof typeof agenda>("Friday");
 
   return (
@@ -56,7 +45,7 @@ export function BucharestAgendaSection() {
           {/* Notebook Ruled Background */}
           <div
             className="absolute inset-0 z-0 pointer-events-none opacity-40 ml-8 md:ml-12"
-            style={{ backgroundImage: 'repeating-linear-gradient(transparent, transparent 39px, #60a5fa 39px, #60a5fa 40px)', backgroundPositionY: '40px' }}
+            style={{ backgroundImage: "repeating-linear-gradient(transparent, transparent 39px, #60a5fa 39px, #60a5fa 40px)", backgroundPositionY: "40px" }}
           ></div>
 
           {/* Content Area */}
@@ -71,7 +60,7 @@ export function BucharestAgendaSection() {
                 <h2 className="font-hand font-bold text-5xl md:text-6xl mb-2 text-sw-blue tracking-wider transform -rotate-2 inline-block">
                   AGENDA
                 </h2>
-                <p className="font-hand text-2xl text-foreground/70 transform -rotate-1">How things will probably work...</p>
+                <p className="font-hand text-2xl text-foreground/70 transform -rotate-1">How things will probably work</p>
               </motion.div>
             </div>
 

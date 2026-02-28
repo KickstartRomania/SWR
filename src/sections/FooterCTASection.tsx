@@ -3,15 +3,15 @@ import Link from "next/link";
 
 export const FooterCTASection = () => {
   return (
-    <footer className="w-full relative bg-white pt-10">
+    <section className="w-full relative bg-white pt-10">
       
       {/* Decorative top characters sitting on the footer edge */}
-      <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-48 h-24 z-20 pointer-events-none hidden md:block">
+      <div className="absolute -top-[11%] right-[3%] -translate-x-1/2 w-60 h-60 z-20 pointer-events-none hidden md:block">
          <Image 
-           src="/images/falling-guy.png" 
+           src="/images/sitting.png" 
            alt="Doodle character looking down" 
            fill 
-           className="object-contain object-bottom rotate-180 opacity-90"
+           className="object-contain object-bottom "
          />
       </div>
 
@@ -50,18 +50,6 @@ export const FooterCTASection = () => {
 
         </div>
       </div>
-
-      {/* Tiny Bottom Bar */}
-      <div className="bg-foreground text-white py-6 px-6 relative z-10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-medium opacity-80">
-          <p>© {new Date().getFullYear()} Startup Weekend Romania. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-sw-blue hover:underline">Privacy Policy</a>
-            <a href="#" className="hover:text-sw-blue hover:underline">Terms of Service</a>
-          </div>
-        </div>
-      </div>
-
-    </footer>
+    </section>
   );
 };

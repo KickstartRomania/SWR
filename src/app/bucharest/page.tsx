@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/Navbar";
-import { FooterCTASection } from "@/sections";
+import { FooterCTASection, Footer } from "@/sections";
 import { BucharestHeroSection } from "./_components/BucharestHeroSection";
 import { BucharestAgendaSection } from "./_components/BucharestAgendaSection";
 import { BucharestMentorsSection } from "./_components/BucharestMentorsSection";
@@ -16,6 +16,7 @@ export default function BucharestPage() {
       <BucharestContactSection />
       <PartnersMarqueeSection />
       <FooterCTASection />
+      <Footer />
     </div>
   );
 }

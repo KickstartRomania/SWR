@@ -85,7 +85,7 @@ export const TestimonialsSection = () => {
           <h2 className="font-heading font-bold text-5xl md:text-6xl mb-6">
             What our past<br />
             <span className="relative inline-block mt-2">
-              participants say
+
               {/* Highlight background */}
               <span className="absolute -inset-2 bg-sw-blue -z-10 rotate-[-2deg] rounded-lg"></span>
               <span className="text-white relative z-10">participants say</span>

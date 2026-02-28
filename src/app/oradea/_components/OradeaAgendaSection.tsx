@@ -32,7 +32,7 @@ const agenda = {
   ],
 };
 
-export function BucharestAgendaSection() {
+export function OradeaAgendaSection() {
   const [activeTab, setActiveTab] = useState<keyof typeof agenda>("Friday");
 
   return (
@@ -71,7 +71,7 @@ export function BucharestAgendaSection() {
                 <h2 className="font-hand font-bold text-5xl md:text-6xl mb-2 text-sw-blue tracking-wider transform -rotate-2 inline-block">
                   AGENDA
                 </h2>
-                <p className="font-hand text-2xl text-foreground/70 transform -rotate-1">How things will probably work...</p>
+                <p className="font-hand text-2xl text-foreground/70 transform -rotate-1">How things will probably work</p>
               </motion.div>
             </div>
 

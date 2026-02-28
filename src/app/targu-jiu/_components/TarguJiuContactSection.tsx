@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { DoodleButton } from "@/components/DoodleButton";
 
-export function BucharestContactSection() {
+export function TarguJiuContactSection() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -65,7 +65,7 @@ export function BucharestContactSection() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 Email
               </h3>
-              <p className="text-lg hover:text-yellow-100 transition-colors cursor-pointer inline-block">bucharest@startupweekend.ro</p>
+              <p className="text-lg hover:text-yellow-100 transition-colors cursor-pointer inline-block">targujiu@startupweekend.ro</p>
             </motion.div>
 
             <motion.div variants={itemVariants}>
@@ -73,7 +73,7 @@ export function BucharestContactSection() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                 Phone
               </h3>
-              <p className="text-lg hover:text-yellow-100 transition-colors cursor-pointer inline-block">+40 123 456 789</p>
+              <p className="text-lg hover:text-yellow-100 transition-colors cursor-pointer inline-block">+40 123 456 780</p>
             </motion.div>
 
             <motion.div variants={itemVariants}>
@@ -81,7 +81,7 @@ export function BucharestContactSection() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                 Location
               </h3>
-              <p className="text-lg">Builders House, Bucharest</p>
+              <p className="text-lg">Innovation Center, Târgu Jiu</p>
             </motion.div>
 
             <motion.div variants={itemVariants}>
@@ -113,7 +113,6 @@ export function BucharestContactSection() {
           transition={{ type: "spring", stiffness: 80, delay: 0.3 }}
           className="bg-white text-foreground p-8 rounded-3xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative"
         >
-          {/* Decorative star on the box */}
           <svg className="absolute -top-6 -right-6 text-yellow-400 w-16 h-16 animate-pulse-slow" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
           </svg>
@@ -133,7 +132,7 @@ export function BucharestContactSection() {
 
             <div>
               <label className="block font-bold mb-2">Phone Number</label>
-              <input type="tel" placeholder="+40 123 456 789" className="w-full px-4 py-3 rounded-xl border-2 border-black focus:outline-none focus:ring-4 focus:ring-sw-blue/30 transition-all hover:bg-gray-50 bg-white" />
+              <input type="tel" placeholder="+40 123 456 780" className="w-full px-4 py-3 rounded-xl border-2 border-black focus:outline-none focus:ring-4 focus:ring-sw-blue/30 transition-all hover:bg-gray-50 bg-white" />
             </div>
 
             <div>

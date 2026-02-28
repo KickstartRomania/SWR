@@ -1,11 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export function EventsSection() {
   const tickets = [
     {
       city: "Bucharest",
+      slug: "bucharest",
       date: "18-20",
       month: "Oct",
       color: "bg-sw-blue",
@@ -18,6 +20,7 @@ export function EventsSection() {
     },
     {
       city: "Târgu Jiu",
+      slug: "targu-jiu",
       date: "18-20",
       month: "Oct",
       color: "bg-sw-navy",
@@ -106,9 +109,12 @@ export function EventsSection() {
                     <div className="font-mono text-foreground/40 font-bold text-xl tracking-wider">
                       GENERAL<br />ADMISSION
                     </div>
-                    <button className="doodle-border doodle-shadow-active bg-sw-blue text-white font-heading font-bold text-2xl px-10 py-4 rounded-full hover:bg-sw-navy hover:scale-105 transition-all w-full sm:w-auto cursor-pointer">
+                    <Link
+                      href={`/${ticket.slug}#signup`}
+                      className="doodle-border doodle-shadow-active bg-sw-blue text-white font-heading font-bold text-2xl px-10 py-4 rounded-full hover:bg-sw-navy hover:scale-105 transition-all w-full sm:w-auto cursor-pointer text-center inline-block"
+                    >
                       Join now
-                    </button>
+                    </Link>
                   </div>
 
                 </div>

@@ -3,7 +3,14 @@
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { DoodleButton } from "@/components/DoodleButton";
-import { FooterCTASection } from "@/sections";
+import { CustomSelect } from "@/components/CustomSelect";
+import { FooterCTASection, Footer } from "@/sections";
+
+const COMMITMENT_OPTIONS = [
+  { value: "yes", label: "Yes, I can commit fully" },
+  { value: "with-some-flexibility", label: "Yes, with some flexibility" },
+  { value: "partial", label: "Partial commitment" },
+];
 
 const inputBase =
   "w-full px-4 py-3 rounded-xl border-2 border-foreground focus:outline-none focus:ring-2 focus:ring-sw-blue focus:border-transparent";
@@ -101,28 +108,17 @@ export default function HostPage() {
                 <h3 className="font-heading font-bold text-xl mb-4 relative z-10">Commitment</h3>
                 <div className="space-y-4 relative z-10">
                   <div>
-                    <label htmlFor="commitment" className="block font-bold mb-2 text-white/90">
+                    <label id="commitment-label" htmlFor="commitment" className="block font-bold mb-2 text-white/90">
                       Can you commit to 54 hours? <span className="text-[#FFD166]">*</span>
                     </label>
-                    <select
+                    <CustomSelect
                       id="commitment"
+                      name="commitment"
+                      options={COMMITMENT_OPTIONS}
+                      placeholder="Select an option"
                       required
-                      className={`${inputBase} bg-white text-foreground appearance-none cursor-pointer
-                        bg-[length:20px] bg-[right_12px_center] bg-no-repeat
-                        pr-12 font-medium
-                        shadow-sm hover:shadow-md hover:border-sw-blue
-                        transition-shadow transition-colors
-                        [&>option]:bg-white [&>option]:text-foreground
-                      `}
-                      style={{
-                        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%231A1A1B' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E")`,
-                      }}
-                    >
-                      <option value="">Select an option</option>
-                      <option value="yes">Yes, I can commit fully</option>
-                      <option value="with-some-flexibility">Yes, with some flexibility</option>
-                      <option value="partial">Partial commitment</option>
-                    </select>
+                      variant="light"
+                    />
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
@@ -181,6 +177,7 @@ export default function HostPage() {
       </main>
 
       <FooterCTASection />
+      <Footer />
     </div>
   );
 }
