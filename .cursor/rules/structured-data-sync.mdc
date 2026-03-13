@@ -1,0 +1,33 @@
+---
+description: Keep structured data (JSON-LD, metadata) in sync when website content changes
+alwaysApply: true
+---
+
+# Structured Data Sync
+
+When you change any website content that affects SEO or structured data, update the corresponding structured data if needed.
+
+## What to check
+
+| Content changed | Structured data to update |
+|----------------|---------------------------|
+| Event dates in hero sections | `src/lib/events.ts` + Event JSON-LD on city pages |
+| Event list in EventsSection | `src/lib/events.ts` |
+| Page title or description | `metadata` in that page or its layout |
+| City/event names | `src/lib/events.ts`, page metadata |
+| Site name or branding | `src/app/layout.tsx` metadata, `src/components/JsonLd.tsx` |
+
+## Key files
+
+- **`src/lib/events.ts`** — Central event config (dates, cities). Used by JSON-LD and sitemap.
+- **`src/components/JsonLd.tsx`** — Organization and Event schema components.
+- **Page layouts** — Metadata (title, description, canonical) per route.
+
+## Example
+
+Changing Bucharest event from "18-20 Oct" to "28-30 Oct":
+
+1. Update `src/lib/events.ts`: `startDate: "2025-10-28"`, `endDate: "2025-10-30"`
+2. Update `src/sections/EventsSection.tsx` (if it lists Bucharest)
+3. Update hero section text in `BucharestHeroSection.tsx`
+4. Event JSON-LD is driven by `events.ts`, so it updates automatically

@@ -107,7 +107,7 @@ export const TestimonialsSection = () => {
           <div className="flex justify-between items-center mb-8 px-4">
             <button
               onClick={handlePrev}
-              className="doodle-border doodle-shadow-active w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-sw-blue-washed transition-colors group"
+              className="cursor-pointer doodle-border doodle-shadow-active w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-sw-blue-washed transition-colors group"
               aria-label="Previous testimonial"
             >
               <svg className="w-6 h-6 group-hover:-translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -121,7 +121,7 @@ export const TestimonialsSection = () => {
 
             <button
               onClick={handleNext}
-              className="doodle-border doodle-shadow-active w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-sw-blue-washed transition-colors group"
+              className="cursor-pointer doodle-border doodle-shadow-active w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-sw-blue-washed transition-colors group"
               aria-label="Next testimonial"
             >
               <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">

@@ -124,15 +124,17 @@ export function Navbar() {
           <SquigglyLine />
         </Link>
 
-        {/* Contact */}
-        <Link href="/contact" className="relative group font-heading hover:-rotate-2 transition-transform inline-block">
-          <span className="relative z-10">Contact</span>
-          <SquigglyLine />
-        </Link>
+
 
         {/* Mentors */}
         <Link href="/mentors" className="relative group font-heading hover:-rotate-2 transition-transform inline-block">
           <span className="relative z-10">Mentors</span>
+          <SquigglyLine />
+        </Link>
+
+        {/* Contact */}
+        <Link href="/contact" className="relative group font-heading hover:-rotate-2 transition-transform inline-block">
+          <span className="relative z-10">Contact</span>
           <SquigglyLine />
         </Link>
 

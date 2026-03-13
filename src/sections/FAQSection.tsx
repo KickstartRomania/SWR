@@ -74,7 +74,7 @@ export const FAQSection = () => {
                   </span>
                   
                   {/* Plus/Minus Icon */}
-                  <div className={`flex-shrink-0 w-10 h-10 rounded-full border-2 border-foreground flex items-center justify-center transition-colors ${isOpen ? 'bg-sw-blue text-white' : 'bg-white text-foreground'}`}>
+                  <div className={`cursor-pointer flex-shrink-0 w-10 h-10 rounded-full border-2 border-foreground flex items-center justify-center transition-colors ${isOpen ? 'bg-sw-blue text-white' : 'bg-white text-foreground'}`}>
                     <svg 
                       className={`w-6 h-6 transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`} 
                       viewBox="0 0 24 24" 

@@ -4,12 +4,61 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const mentors = [
-  { name: "John Doe", company: "Tech Startup Inc.", image: "/images/mentors/john-doe.jpg" },
-  { name: "Jane Smith", company: "Innovation Labs", image: "/images/mentors/jane-smith.jpg" },
-  { name: "Alex Johnson", company: "Venture Capital Co.", image: "/images/mentors/alex-johnson.jpg" },
-  { name: "Maria Garcia", company: "Design Studio", image: "/images/mentors/maria-garcia.jpg" },
-  { name: "David Chen", company: "Software Solutions", image: "/images/mentors/david-chen.jpg" },
-  { name: "Sarah Williams", company: "Marketing Agency", image: "/images/mentors/sarah-williams.jpg" },
+  {
+    name: "Tiberiu Avramiuc",
+    company: "",
+    image: "/images/bucharest/mentors/tiberiu-avramiuc.png",
+  },
+  {
+    name: "Liviu Gherghescu",
+    company: "",
+    image: "/images/bucharest/mentors/liviu-gherghescu.png",
+  },
+  {
+    name: "Ioana Anutoiu",
+    company: "",
+    image: "/images/bucharest/mentors/ioana-anutoiu.png",
+  },
+  {
+    name: "Bogdan Litescu",
+    company: "",
+    image: "/images/bucharest/mentors/bogdan-litescu.png",
+  },
+  {
+    name: "Petre Gherghinescu",
+    company: "",
+    image: "/images/bucharest/mentors/petre-gherghinescu.png",
+  },
+  {
+    name: "Cosmin Cosma",
+    company: "",
+    image: "/images/bucharest/mentors/cosmin-cosma.png",
+  },
+  {
+    name: "Cristina Toncu",
+    company: "",
+    image: "/images/bucharest/mentors/cristina-toncu.png",
+  },
+  {
+    name: "Florian Tufan",
+    company: "",
+    image: "/images/bucharest/mentors/florian-tufan.png",
+  },
+  {
+    name: "Vlad Andries",
+    company: "",
+    image: "/images/bucharest/mentors/vlad-andries.png",
+  },
+  {
+    name: "Cătălin Spiridon",
+    company: "",
+    image: "/images/bucharest/mentors/catalin-spiridon.png",
+  },
+  {
+    name: "Aleodor Tabarcea",
+    company: "",
+    image: "/images/bucharest/mentors/aleodor-tabarcea.png",
+  },
 ];
 
 export function BucharestMentorsSection() {
@@ -62,10 +111,13 @@ export function BucharestMentorsSection() {
                 </svg>
               </div>
               <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-black mb-4 bg-gray-200 relative group-hover:border-sw-blue transition-colors duration-300">
-                {/* Fallback image if actual image is missing */}
-                <div className="w-full h-full flex items-center justify-center text-gray-400">
-                  <svg className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-                </div>
+                <Image
+                  src={mentor.image}
+                  alt={mentor.name}
+                  fill
+                  sizes="128px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <h3 className="font-bold text-2xl mb-1 group-hover:text-sw-blue transition-colors">{mentor.name}</h3>
               <p className="text-sw-blue font-medium">{mentor.company}</p>

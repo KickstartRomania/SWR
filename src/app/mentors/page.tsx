@@ -1,50 +1,81 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { FooterCTASection, Footer } from "@/sections";
+import { useState } from "react";
 
-const mentors = [
-  {
-    name: "John Doe",
-    position: "CEO, Tech Startup Inc.",
-    image: "/images/mentors/john-doe.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/johndoe",
-  },
-  {
-    name: "Jane Smith",
-    position: "Founder, Innovation Labs",
-    image: "/images/mentors/jane-smith.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/janesmith",
-  },
-  {
-    name: "Alex Johnson",
-    position: "Partner, Venture Capital Co.",
-    image: "/images/mentors/alex-johnson.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/alexjohnson",
-  },
-  {
-    name: "Maria Garcia",
-    position: "Creative Director, Design Studio",
-    image: "/images/mentors/maria-garcia.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/mariagarcia",
-  },
-  {
-    name: "David Chen",
-    position: "CTO, Software Solutions",
-    image: "/images/mentors/david-chen.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/davidchen",
-  },
-  {
-    name: "Sarah Williams",
-    position: "Head of Marketing, Marketing Agency",
-    image: "/images/mentors/sarah-williams.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/sarahwilliams",
-  },
+type CityId = "bucharest" | "cluj" | "constanta" | "oradea" | "targu-jiu";
+
+type Mentor = {
+  name: string;
+  image: string;
+  position?: string;
+  linkedInUrl?: string;
+};
+
+const CITIES: { id: CityId; label: string; folder: string }[] = [
+  { id: "bucharest", label: "Bucharest", folder: "bucharest" },
+  { id: "cluj", label: "Cluj", folder: "cluj" },
+  { id: "constanta", label: "Constanța", folder: "constanta" },
+  { id: "oradea", label: "Oradea", folder: "oradea" },
+  // Folder on disk is "targujiu"
+  { id: "targu-jiu", label: "Târgu Jiu", folder: "targujiu" },
 ];
+
+const nameFromFilename = (filename: string) => {
+  return filename
+    .replace(/\.png$/i, "")
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+};
+
+const BUCURESTI_FILES = [
+  "aleodor-tabarcea.png",
+  "bogdan-litescu.png",
+  "catalin-spiridon.png",
+  "cosmin-cosma.png",
+  "cristina-toncu.png",
+  "florian-tufan.png",
+  "ioana-anutoiu.png",
+  "liviu-gherghescu.png",
+  "petre-gherghinescu.png",
+  "tiberiu-avramiuc.png",
+  "vlad-andries.png",
+];
+
+const TARGU_JIU_FILES = [
+  "adi-gheorghe.png",
+  "alex-crac.png",
+  "andreas-baschir.png",
+  "bogdan-ionita.png",
+  "bogdan-jufa.png",
+  "cosmin-pirvu.png",
+  "florian-usurelu.png",
+  "george-bonea.png",
+  "ionut-vasilica.png",
+  "marius-mitroi.png",
+  "mihail-olaru.png",
+  "ovidiu-dinisor.png",
+  "valentin-albu.png",
+];
+
+const mentorsByCity: Record<CityId, Mentor[]> = {
+  bucharest: BUCURESTI_FILES.map((file) => ({
+    name: nameFromFilename(file),
+    image: `/images/bucharest/mentors/${file}`,
+  })),
+  cluj: [],
+  constanta: [],
+  oradea: [],
+  "targu-jiu": TARGU_JIU_FILES.map((file) => ({
+    name: nameFromFilename(file),
+    image: `/images/targujiu/mentors/${file}`,
+  })),
+};
 
 const LinkedInIcon = () => (
   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -68,7 +99,7 @@ function MentorCard({
   mentor,
   index,
 }: {
-  mentor: (typeof mentors)[number];
+  mentor: Mentor;
   index: number;
 }) {
   const [imageError, setImageError] = useState(false);
@@ -94,21 +125,29 @@ function MentorCard({
         )}
       </div>
       <h3 className="font-bold text-2xl mb-1">{mentor.name}</h3>
-      <p className="text-sw-blue font-medium mb-4">{mentor.position}</p>
-      <Link
-        href={mentor.linkedInUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`${mentor.name} on LinkedIn`}
-        className="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center text-foreground hover:bg-sw-blue hover:text-white hover:border-sw-blue transition-colors"
-      >
-        <LinkedInIcon />
-      </Link>
+      {mentor.position && (
+        <p className="text-sw-blue font-medium mb-4">{mentor.position}</p>
+      )}
+      {mentor.linkedInUrl && (
+        <Link
+          href={mentor.linkedInUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${mentor.name} on LinkedIn`}
+          className="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center text-foreground hover:bg-sw-blue hover:text-white hover:border-sw-blue transition-colors"
+        >
+          <LinkedInIcon />
+        </Link>
+      )}
     </motion.div>
   );
 }
 
 export default function MentorsPage() {
+  const [selectedCity, setSelectedCity] = useState<CityId>("bucharest");
+
+  const selectedMentors = mentorsByCity[selectedCity] ?? [];
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -131,15 +170,59 @@ export default function MentorsPage() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="font-medium text-xl text-foreground/70"
               >
-                Expert guidance to help you build and validate your idea
+                Expert guidance from mentors across our Startup Weekend cities
               </motion.p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {mentors.map((mentor, index) => (
-                <MentorCard key={mentor.name} mentor={mentor} index={index} />
-              ))}
+            <div className="mb-10 sticky top-20 z-20 bg-white/90 backdrop-blur-sm">
+              {/* Mobile: horizontal, scrollable list */}
+              <div className="flex md:hidden gap-3 overflow-x-auto pb-2">
+                {CITIES.map((city) => (
+                  <button
+                    key={city.id}
+                    type="button"
+                    onClick={() => setSelectedCity(city.id)}
+                    className={`px-4 py-2 rounded-full border-2 border-black font-heading text-sm shadow-[3px_3px_0px_rgba(0,0,0,1)] whitespace-nowrap transition-all ${
+                      selectedCity === city.id
+                        ? "bg-sw-blue text-white"
+                        : "bg-[#FEF9C3] hover:-translate-y-0.5 hover:shadow-[5px_5px_0px_rgba(0,0,0,1)]"
+                    }`}
+                  >
+                    {city.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Desktop: horizontal row */}
+              <div className="hidden md:flex flex-wrap justify-center gap-3">
+                {CITIES.map((city) => (
+                  <button
+                    key={city.id}
+                    type="button"
+                    onClick={() => setSelectedCity(city.id)}
+                    className={`px-4 py-2 rounded-full border-2 border-black font-heading text-base shadow-[3px_3px_0px_rgba(0,0,0,1)] transition-all ${
+                      selectedCity === city.id
+                        ? "bg-sw-blue text-white"
+                        : "bg-[#FEF9C3] hover:-translate-y-0.5 hover:shadow-[5px_5px_0px_rgba(0,0,0,1)]"
+                    }`}
+                  >
+                    {city.label}
+                  </button>
+                ))}
+              </div>
             </div>
+
+            {selectedMentors.length === 0 ? (
+              <div className="text-center text-foreground/70 font-medium">
+                Mentor lineup for this city is coming soon. Stay tuned!
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {selectedMentors.map((mentor, index) => (
+                  <MentorCard key={`${selectedCity}-${mentor.name}`} mentor={mentor} index={index} />
+                ))}
+              </div>
+            )}
           </div>
         </section>
       </main>

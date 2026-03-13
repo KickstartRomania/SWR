@@ -1,21 +1,100 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const mentors = [
-  { name: "Valentin Albu", role: "Deputy Chief Executive Officer", company: "G Energy Solutions", linkedin: true },
-  { name: "Ovidiu Dinisor", role: "IT Manager", company: "ING", linkedin: true },
-  { name: "Mihail Olaru", role: "Antrepenor", company: "Conacul Olarilor", linkedin: false },
-  { name: "Marius Mitroi", role: "Innovation and Entrepreneurship Advisor", company: "UEFISCDI", linkedin: true },
-  { name: "Ionut Vasilica", role: "CEO & Co-founder", company: "G Energy Solutions", linkedin: true },
-  { name: "George Bonea", role: "Communications Specialist", company: "", linkedin: true },
-  { name: "Florian Usurelu", role: "Software Engineer", company: "Google", linkedin: true },
-  { name: "Bogdan Jufa", role: "Franchise Owner", company: "5 to go Tg. Jiu", linkedin: true },
-  { name: "Bogdan Ionita", role: "Chief Product Officer", company: "Mirro.io", linkedin: true },
-  { name: "Andreas Baschir", role: "Python LLM Developer", company: "Deutche Telekom", linkedin: true },
-  { name: "Alex Crac", role: "Founder", company: "KRK Transportation Romania", linkedin: false },
-  { name: "Adi Gheorghe", role: "Founder", company: "Doers Ventures", linkedin: true },
-  { name: "Cosmin Pirvu", role: "Startup Program Manager", company: "Veridion", linkedin: true },
+  {
+    name: "Valentin Albu",
+    role: "Deputy Chief Executive Officer",
+    company: "G Energy Solutions",
+    linkedin: true,
+    image: "/images/targujiu/mentors/valentin-albu.png",
+  },
+  {
+    name: "Ovidiu Dinisor",
+    role: "IT Manager",
+    company: "ING",
+    linkedin: true,
+    image: "/images/targujiu/mentors/ovidiu-dinisor.png",
+  },
+  {
+    name: "Mihail Olaru",
+    role: "Antrepenor",
+    company: "Conacul Olarilor",
+    linkedin: false,
+    image: "/images/targujiu/mentors/mihail-olaru.png",
+  },
+  {
+    name: "Marius Mitroi",
+    role: "Innovation and Entrepreneurship Advisor",
+    company: "UEFISCDI",
+    linkedin: true,
+    image: "/images/targujiu/mentors/marius-mitroi.png",
+  },
+  {
+    name: "Ionut Vasilica",
+    role: "CEO & Co-founder",
+    company: "G Energy Solutions",
+    linkedin: true,
+    image: "/images/targujiu/mentors/ionut-vasilica.png",
+  },
+  {
+    name: "George Bonea",
+    role: "Communications Specialist",
+    company: "",
+    linkedin: true,
+    image: "/images/targujiu/mentors/george-bonea.png",
+  },
+  {
+    name: "Florian Usurelu",
+    role: "Software Engineer",
+    company: "Google",
+    linkedin: true,
+    image: "/images/targujiu/mentors/florian-usurelu.png",
+  },
+  {
+    name: "Bogdan Jufa",
+    role: "Franchise Owner",
+    company: "5 to go Tg. Jiu",
+    linkedin: true,
+    image: "/images/targujiu/mentors/bogdan-jufa.png",
+  },
+  {
+    name: "Bogdan Ionita",
+    role: "Chief Product Officer",
+    company: "Mirro.io",
+    linkedin: true,
+    image: "/images/targujiu/mentors/bogdan-ionita.png",
+  },
+  {
+    name: "Andreas Baschir",
+    role: "Python LLM Developer",
+    company: "Deutche Telekom",
+    linkedin: true,
+    image: "/images/targujiu/mentors/andreas-baschir.png",
+  },
+  {
+    name: "Alex Crac",
+    role: "Founder",
+    company: "KRK Transportation Romania",
+    linkedin: false,
+    image: "/images/targujiu/mentors/alex-crac.png",
+  },
+  {
+    name: "Adi Gheorghe",
+    role: "Founder",
+    company: "Doers Ventures",
+    linkedin: true,
+    image: "/images/targujiu/mentors/adi-gheorghe.png",
+  },
+  {
+    name: "Cosmin Pirvu",
+    role: "Startup Program Manager",
+    company: "Veridion",
+    linkedin: true,
+    image: "/images/targujiu/mentors/cosmin-pirvu.png",
+  },
 ];
 
 export function TarguJiuMentorsSection() {
@@ -68,9 +147,13 @@ export function TarguJiuMentorsSection() {
                 </svg>
               </div>
               <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-black mb-4 bg-gray-200 relative group-hover:border-sw-blue transition-colors duration-300">
-                <div className="w-full h-full flex items-center justify-center text-gray-400">
-                  <svg className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-                </div>
+                <Image
+                  src={mentor.image}
+                  alt={mentor.name}
+                  fill
+                  sizes="128px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <h3 className="font-bold text-2xl mb-1 group-hover:text-sw-blue transition-colors">{mentor.name}</h3>
               {mentor.role && <p className="text-sw-blue font-medium text-sm mb-0.5">{mentor.role}</p>}
