@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 export function EventsSection() {
   const tickets = [
     {
-      city: "Bucharest",
-      slug: "bucharest",
-      date: "18-20",
-      month: "Oct",
+      city: "Constanta",
+      slug: "constanta",
+      date: "17-19",
+      month: "April",
       color: "bg-sw-blue",
       rotation: -6,
       xOffset: -40,
@@ -19,10 +19,11 @@ export function EventsSection() {
       initialRotate: 0,
     },
     {
-      city: "Târgu Jiu",
-      slug: "targu-jiu",
-      date: "18-20",
-      month: "Oct",
+      city: "Bucharest",
+      hasDiffUrl: true,
+      slug: "https://startupweekendbucharest.com/",
+      date: "24-26",
+      month: "April",
       color: "bg-sw-navy",
       rotation: 8,
       xOffset: 40,
@@ -110,7 +111,7 @@ export function EventsSection() {
                       GENERAL<br />ADMISSION
                     </div>
                     <Link
-                      href={`/${ticket.slug}#signup`}
+                      href={ticket.hasDiffUrl ? ticket.slug : `/${ticket.slug}#signup`}
                       className="doodle-border doodle-shadow-active bg-sw-blue text-white font-heading font-bold text-2xl px-10 py-4 rounded-full hover:bg-sw-navy hover:scale-105 transition-all w-full sm:w-auto cursor-pointer text-center inline-block"
                     >
                       Join now

@@ -156,7 +156,7 @@ export const HowItWorksSection = () => {
             </svg>
           </h2>
           <p className="font-medium text-xl text-foreground/70 max-w-2xl mx-auto mt-8">
-            The ultimate 54-hour rollercoaster. From meeting strangers on Friday to pitching a startup on Sunday.
+          From meeting strangers on Friday to pitching a startup together on Sunday.
           </p>
         </div>
 

@@ -111,17 +111,17 @@ export function HeroSection() {
         
         {/* Hand-drawn arrow pointing to title */}
         <motion.div 
-          className="absolute top-1/2 right-0 mt-6 md:right-[5%] z-10"
+          className="absolute top-1/2 right-2 md:right-6 lg:right-10 xl:right-16 mt-6 z-10"
         >
           <motion.p 
             initial={{ opacity: 0, y: 10, rotate: -15 }}
             animate={{ opacity: 1, y: 0, rotate: -5 }}
             transition={{ duration: 0.5, delay: 1.2, type: "spring" }}
-            className="font-hand text-2xl md:text-3xl text-sw-navy absolute -top-12 -right-5 md:-right-50 hidden sm:block whitespace-nowrap rotate-45"
+            className="font-hand text-2xl md:text-3xl text-sw-navy absolute -top-12 right-0 md:-right-6 lg:-right-10 xl:-right-20 hidden sm:block whitespace-nowrap rotate-45"
           >
             No talk, all action!
           </motion.p>
-          <svg className="absolute top-10 -right-16 md:-right-50 hidden sm:block rotate-30" width="141" height="172" viewBox="0 0 141 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="absolute top-10 right-0 md:-right-4 lg:-right-10 xl:-right-20 hidden sm:block rotate-30" width="141" height="172" viewBox="0 0 141 172" fill="none" xmlns="http://www.w3.org/2000/svg">
             <motion.path
               initial={{ pathLength: 0 }}
               animate={{ pathLength: 1 }}
@@ -135,7 +135,7 @@ export function HeroSection() {
           variants={textBlurVariants}
           className="mt-8 font-medium text-lg md:text-xl text-foreground/80 max-w-2xl leading-relaxed"
         >
-          At Startup Weekend developers, designers, marketers, and idea people come together to launch something real. Pitch on Friday, build all weekend, and demo your startup on Sunday.
+          At Startup Weekend, developers, designers, marketers, and idea people come together to launch something real. Pitch on Friday, build all weekend, and demo your startup on Sunday.
         </motion.p>
 
         <motion.div 

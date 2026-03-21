@@ -56,7 +56,7 @@ export const Footer = () => {
             </h2>
 
             <p className="font-hand text-3xl md:text-4xl text-foreground font-bold mt-12 md:mt-16 -rotate-2 max-w-sm leading-relaxed">
-              54 hours to build a startup. No fluff, just builders.
+              54 hours to build a startup. No fluff, just makers.
             </p>
 
             <div className="mt-14 flex items-center gap-6">

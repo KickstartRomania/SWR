@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { DoodleButton } from "./DoodleButton";
 import Link from "next/link";
-
+import Image from "next/image";
 const SCROLL_THRESHOLD = 80;
 
 const CITIES: { name: string; href: string }[] = [
@@ -65,14 +65,16 @@ export function Navbar() {
     <>
     <header className="w-full flex items-center justify-between p-4 md:p-6 md:px-12 relative z-50">
       {/* Playful Logo */}
-      <div className="font-heading font-bold text-2xl md:text-3xl tracking-tight z-50 group cursor-pointer flex items-center gap-1">
-        <Link href="/" className="flex items-center">
-          <span className="hover:-rotate-3 transition-transform inline-block">Startup</span>
-          <span className="ml-2 sticker-box text-xl md:text-2xl group-hover:rotate-12 transition-transform">W</span>
-          <span className="sticker-box sticker-box--yellow text-xl md:text-2xl group-hover:-rotate-12 transition-transform">E</span>
-          <span className="ml-1 hover:rotate-3 transition-transform inline-block">ekend</span>
-        </Link>
-      </div>
+      <Link href="/">
+      <Image
+        src="/logos/sw-weekend/nav-logo.svg"
+        alt="Startup Weekend Romania Logo"
+        width={100}
+        height={100}
+        className="w-30 h-20"
+      
+      />
+</Link>
 
       {/* Desktop Nav */}
       <nav className="hidden md:flex items-center gap-10 font-bold relative text-lg">

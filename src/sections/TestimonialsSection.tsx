@@ -6,28 +6,22 @@ import { motion, AnimatePresence } from "framer-motion";
 export const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Iacob Mihai",
+      name: "Andrei Scurtu",
       city: "Bucharest",
-      quote: "Fuel your brain with 7 meals, endless snacks, and as much coffee as you need. We've got the energy covered — so you can stay focused on building something great.",
+      quote: "Startup Weekend Bucharest is the place to be if you want to squeeze 3 months of ideation into one weekend and if you want to find a team to build something.",
       color: "bg-[#FFD166]",
     },
     {
-      name: "John Doe",
-      city: "Cluj",
-      quote: "At Startup Weekend developers, designers, marketers, and idea people come together to launch something real. Pitch on Friday, build all weekend, and demo your startup on Sunday.",
+      name: "Mihail Adrian Viasu",
+      city: "Bucharest",
+      quote: "I have participated in SW2015 in Denmark.  I have participated also in SW2018. The core of this type of event is for people to share this experience of working within their community and develop together. ",
       color: "bg-sw-blue-washed",
     },
+
     {
-      name: "Jane Smith",
-      city: "Timișoara",
-      quote: "The best weekend of my life! I met amazing people and built something I'm proud of. The energy and creativity in the room was incredible.",
-      color: "bg-[#EF476F]",
-      textColor: "text-white",
-    },
-    {
-      name: "Alex Popescu",
-      city: "Iași",
-      quote: "Startup Weekend changed my perspective on entrepreneurship. In just 54 hours, we went from an idea to a working prototype and a pitch that got investors interested.",
+      name: "Alexandra Tudor",
+      city: "Bucharest",
+      quote: "I decided to participate in this event to gain hands-on experience that might support my career transition. I intentionally focused on the non-technical aspects to step outside my comfort zone and deepen my understanding of market validation, research, and competitor analysis.",
       color: "bg-sw-blue",
       textColor: "text-white",
     }

@@ -32,29 +32,81 @@ export function PartnersMarqueeSection() {
           >
             {[
               {
-                src: "/logos/agorize.png",
-                alt: "Agorize logo",
+                src: "/logos/partners/ambasada.png",
+                alt: "Ambasada logo",
               },
               {
-                src: "/logos/google.png",
-                alt: "Google logo",
+                src: "/logos/partners/brewtifi.png",
+                alt: "Brewtifi logo",
               },
               {
-                src: "/logos/htw.png",
-                alt: "HTW logo",
+                src: "/logos/partners/cluj-startups.png",
+                alt: "Cluj Startups logo",
               },
               {
-                src: "/logos/startupwiseguys.png",
-                alt: "Startup Wise Guys logo",
+                src: "/logos/partners/ctt.png",
+                alt: "CTT logo",
               },
               {
-                src: "/logos/techstars.png",
-                alt: "Techstars logo",
+                src: "/logos/partners/fed-start.png",
+                alt: "Fed Start logo",
               },
               {
-                src: "/logos/sw-romania.png",
-                alt: "Startup Weekend Romania logo",
+                src: "/logos/partners/frisbo.png",
+                alt: "Frisbo logo",
               },
+              {
+                src: "/logos/partners/htw.png",
+                alt: "How to Web logo",
+              },
+              {
+                src: "/logos/partners/inno-hub.png",
+                alt: "Innno Hub logo",
+              },
+              {
+                src: "/logos/partners/lsac.png",
+                alt: "LSAC logo",
+              },
+              {
+                src: "/logos/partners/lsuoc.png",
+                alt: "LSUOC logo",
+              },
+              {
+                src: "/logos/partners/multisoft.png",
+                alt: "Multisoft logo",
+              },
+              {
+                src: "/logos/partners/neuron-eng.png",
+                alt: "Neuron English logo",
+              },
+              {
+                src: "/logos/partners/quartet.png",
+                alt: "Quartet logo",
+              },
+              {
+                src: "/logos/partners/san-marco.png",
+                alt: "San Marco Pizza logo",
+              },
+              {
+                src: "/logos/partners/techstars.png",
+                alt: "TechStars logo",
+              },
+              {
+                src: "/logos/partners/uer.png",
+                alt: "UER logo",
+              },
+              {
+                src: "/logos/partners/univ-ct.png",
+                alt: "University of Constanta logo",
+              },
+              {
+                src: "/logos/partners/v7capital.png",
+                alt: "V7 Capital logo",
+              },
+              {
+                src: "/logos/partners/vip.png",
+                alt: "VIP logo",
+              }
             ].map((logo) => (
               <div
                 key={logo.src}
@@ -64,8 +116,8 @@ export function PartnersMarqueeSection() {
                   src={logo.src}
                   alt={logo.alt}
                   width={160}
-                  height={48}
-                  className="h-10 md:h-12 w-auto object-contain"
+                  height={160}
+                  className="h-20 w-20w-auto object-contain"
                 />
               </div>
             ))}

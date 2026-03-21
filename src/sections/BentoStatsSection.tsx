@@ -72,7 +72,7 @@ export function BentoStatsSection() {
 
             <div className="relative z-20 flex flex-col h-full justify-start">
               <h3 className="font-heading font-black text-4xl text-white leading-tight origin-left group-hover:scale-105 transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]">
-                100+<br/>Makers
+                50+<br/>Makers
               </h3>
               
               <div className="mt-4 flex origin-left group-hover:scale-110 group-hover:rotate-[-3deg] transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] delay-75">
