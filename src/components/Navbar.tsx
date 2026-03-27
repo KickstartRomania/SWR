@@ -63,7 +63,7 @@ export function Navbar() {
 
   return (
     <>
-    <header className="w-full flex items-center justify-between py-2 px-4 md:py-3 md:px-12 sticky top-0 bg-white z-[100] border-b-[3px] border-black">
+    <header className="w-full flex items-center justify-between py-2 px-4 md:py-3 md:px-12 sticky top-0 bg-white z-[100]">
       {/* Playful Logo */}
       <Link href="/">
       <Image
