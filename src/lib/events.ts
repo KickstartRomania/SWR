@@ -14,8 +14,11 @@ export const EVENTS = {
   constanta: {
     name: "Startup Weekend Constanța",
     city: "Constanța",
-    startDate: "2025-10-18",
-    endDate: "2025-10-20",
+    startDate: "2026-04-17",
+    endDate: "2026-04-19",
+    location: "Marco Business Center",
+    address: "Aurel Vlaicu 251",
+    googleMapsUrl: "https://maps.app.goo.gl/TjbAshKkzzJhpUgv6",
   },
   oradea: {
     name: "Startup Weekend Oradea",

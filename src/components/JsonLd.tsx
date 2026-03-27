@@ -24,6 +24,8 @@ export function EventJsonLd({
   startDate,
   endDate,
   location,
+  address,
+  googleMapsUrl,
   description,
 }: {
   name: string;
@@ -31,6 +33,8 @@ export function EventJsonLd({
   startDate: string;
   endDate: string;
   location: string;
+  address?: string;
+  googleMapsUrl?: string;
   description: string;
 }) {
   const data = {
@@ -42,6 +46,13 @@ export function EventJsonLd({
     location: {
       "@type": "Place",
       name: location,
+      ...(address && {
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: address,
+        },
+      }),
+      ...(googleMapsUrl && { url: googleMapsUrl }),
     },
     organizer: {
       "@type": "Organization",

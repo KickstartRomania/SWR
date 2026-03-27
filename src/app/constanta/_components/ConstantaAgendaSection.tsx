@@ -5,19 +5,32 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const agenda = {
   Friday: [
-    { time: "17:30 - 18:00", title: "Registration", description: "Arrive at the venue and get checked in" },
-    { time: "18:00 - 18:30", title: "Dinner & networking", description: "Eat food, share ideas, practice pitches, and get to know your fellow participants" },
-    { time: "18:30 - 19:00", title: "Welcome", description: "Meet our Techstars facilitator and review agenda for the weekend" },
-    { time: "19:00 - 20:00", title: "Pitches", description: "Facilitator gives a walk-through of the pitching process and then pitches begin! Optionally line up to give your pitch" },
-    { time: "20:00 - 21:00", title: "Vote for top pitches and form teams", description: "Network, share questions, vote for the top pitches and form teams" },
-    { time: "21:00 - 21:30", title: "Workshop: From Idea to Reality", description: "Learn how to validate your idea and start building" },
-    { time: "21:30 - 00:00", title: "Start building!", description: "Set up your team workspace for the weekend and start work on the idea. You may stay as late as the venue will allow" },
+    { time: "17:30 – 18:00", title: "Registration", description: "Arrive, check in, grab a badge, and meet fellow participants." },
+    { time: "18:00 – 19:00", title: "Networking & Dinner", description: "Break the ice, meet new people, and start sharing ideas." },
+    { time: "19:00 – 19:15", title: "Welcome & Kickoff", description: "Quick intro, rules, and what to expect." },
+    { time: "19:15 – 20:15", title: "Idea Pitches", description: "Pitch your idea or listen to others. Anyone can take the stage." },
+    { time: "20:15 – 20:45", title: "Voting & Team Formation", description: "Vote for the best ideas and form teams." },
+    { time: "20:45 – 21:00", title: "Validation Basics", description: "Quick guidance on how to validate ideas fast." },
+    { time: "21:00 – Late", title: "Start Building", description: "Define your concept, assign roles, and begin working." },
   ],
   Saturday: [
-    { time: "TBA", title: "Schedule coming soon", description: "Stay tuned for the full Saturday program" },
+    { time: "09:00 – 09:30", title: "Breakfast", description: "" },
+    { time: "09:30 – 10:30", title: "Workshop", description: "" },
+    { time: "10:30 – 13:00", title: "Build Sprint #1", description: "" },
+    { time: "13:00 – 14:00", title: "Lunch", description: "" },
+    { time: "14:00 – 17:00", title: "Mentor Sessions", description: "" },
+    { time: "17:00 – 19:00", title: "Build Sprint #2", description: "" },
+    { time: "19:00 – 20:00", title: "Dinner", description: "" },
+    { time: "20:00 – Late", title: "Pitch Workshop & Late Build", description: "" },
   ],
   Sunday: [
-    { time: "TBA", title: "Schedule coming soon", description: "Stay tuned for the full Sunday program" },
+    { time: "09:00 – 09:30", title: "Breakfast", description: "" },
+    { time: "09:30 – 12:30", title: "Final Build Sprint", description: "" },
+    { time: "12:30 – 13:30", title: "Lunch", description: "" },
+    { time: "13:30 – 15:30", title: "Pitch Prep & Tech Check", description: "" },
+    { time: "16:00 – 18:00", title: "Final Presentations", description: "" },
+    { time: "18:00 – 18:30", title: "Awards & Announcements", description: "Winners revealed, quick wrap-up." },
+    { time: "18:30 – 19:30", title: "Networking & Closing", description: "Celebrate, connect, and wrap the weekend." },
   ],
 };
 
