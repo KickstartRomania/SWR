@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { FooterCTASection, Footer } from "@/sections";
 import { BucharestHeroSection } from "./_components/BucharestHeroSection";
-import { BucharestAgendaSection } from "./_components/BucharestAgendaSection";
+import { BucharestWhatIsSection } from "./_components/BucharestWhatIsSection";
 import { BucharestMentorsSection } from "./_components/BucharestMentorsSection";
 import { BucharestContactSection } from "./_components/BucharestContactSection";
+import { BucharestHowItWorksSection } from "./_components/BucharestHowItWorksSection";
 import { PartnersMarqueeSection } from "@/sections";
 import { SITE_URL } from "@/lib/constants";
 import { EVENTS } from "@/lib/events";
@@ -37,8 +38,9 @@ export default function BucharestPage() {
       />
       <Navbar />
       <BucharestHeroSection />
-      <BucharestAgendaSection />
-      <BucharestMentorsSection />
+      <BucharestWhatIsSection />
+      <BucharestHowItWorksSection />
+      {/* <BucharestMentorsSection /> */}
       <BucharestContactSection />
       <PartnersMarqueeSection />
       <FooterCTASection />

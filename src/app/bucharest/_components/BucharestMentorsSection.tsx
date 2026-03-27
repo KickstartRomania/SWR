@@ -80,7 +80,7 @@ export function BucharestMentorsSection() {
           className="text-center mb-16"
         >
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 relative inline-block">
-            Meet your mentors
+            Previous mentors
             <motion.div
               className="absolute -bottom-2 left-0 w-full h-3 bg-yellow-300 -z-10 transform -rotate-2"
               initial={{ scaleX: 0 }}
@@ -90,7 +90,7 @@ export function BucharestMentorsSection() {
               style={{ originX: 0 }}
             />
           </h2>
-          <p className="font-medium text-xl text-foreground/70 mt-6">Expert guidance to help you build and validate your idea</p>
+          <p className="font-medium text-xl text-foreground/70 mt-6">Mentors from our previous Bucharest editions</p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

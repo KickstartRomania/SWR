@@ -7,6 +7,7 @@ export function EventsSection() {
   const tickets = [
     {
       city: "Constanta",
+      location: "Marco Business Center",
       slug: "constanta",
       date: "17-19",
       month: "April",
@@ -20,6 +21,7 @@ export function EventsSection() {
     },
     {
       city: "Bucharest",
+      location: "Nova",
       hasDiffUrl: true,
       slug: "https://startupweekendbucharest.com/",
       date: "24-26",
@@ -94,7 +96,7 @@ export function EventsSection() {
                           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                           <circle cx="12" cy="10" r="3" />
                         </svg>
-                        Marco Business Center
+                        {ticket.location}
                       </div>
                     </div>
                     {/* Fake QR / Logo block */}
