@@ -3,6 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import {
   FooterCTASection,
   Footer,
+  FAQSection,
 } from "@/sections";
 import { ConstantaHeroSection } from "./_components/ConstantaHeroSection";
 import { ConstantaWhatIsSection } from "./_components/ConstantaWhatIsSection";
@@ -48,6 +49,7 @@ export default function ConstantaPage() {
       <ConstantaHowItWorksSection />
       <ConstantaMentorsSection />
       <ConstantaAgendaSection />
+      <FAQSection />
       <ConstantaContactSection />
       <ConstantaPartnersSection />
       <FooterCTASection />
