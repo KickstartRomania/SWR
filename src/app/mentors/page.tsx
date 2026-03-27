@@ -5,14 +5,15 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { FooterCTASection, Footer } from "@/sections";
+import { bucharestMentors, constantaMentors, type MentorEntry } from "@/lib/mentors-data";
 import { useState } from "react";
 
 type CityId = "bucharest" | "cluj" | "constanta" | "oradea" | "targu-jiu";
 
 type Mentor = {
   name: string;
-  image: string;
-  position?: string;
+  role?: string;
+  image?: string;
   linkedInUrl?: string;
 };
 
@@ -33,20 +34,6 @@ const nameFromFilename = (filename: string) => {
     .join(" ");
 };
 
-const BUCURESTI_FILES = [
-  "aleodor-tabarcea.png",
-  "bogdan-litescu.png",
-  "catalin-spiridon.png",
-  "cosmin-cosma.png",
-  "cristina-toncu.png",
-  "florian-tufan.png",
-  "ioana-anutoiu.png",
-  "liviu-gherghescu.png",
-  "petre-gherghinescu.png",
-  "tiberiu-avramiuc.png",
-  "vlad-andries.png",
-];
-
 const TARGU_JIU_FILES = [
   "adi-gheorghe.png",
   "alex-crac.png",
@@ -63,13 +50,18 @@ const TARGU_JIU_FILES = [
   "valentin-albu.png",
 ];
 
+function mentorEntryToCard(m: MentorEntry): Mentor {
+  return {
+    name: m.name,
+    role: m.role,
+    image: m.image,
+  };
+}
+
 const mentorsByCity: Record<CityId, Mentor[]> = {
-  bucharest: BUCURESTI_FILES.map((file) => ({
-    name: nameFromFilename(file),
-    image: `/images/bucharest/mentors/${file}`,
-  })),
+  bucharest: bucharestMentors.map(mentorEntryToCard),
   cluj: [],
-  constanta: [],
+  constanta: constantaMentors.map(mentorEntryToCard),
   oradea: [],
   "targu-jiu": TARGU_JIU_FILES.map((file) => ({
     name: nameFromFilename(file),
@@ -112,7 +104,7 @@ function MentorCard({
       className="bg-[#fcfcfc] p-6 rounded-2xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center text-center group hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-shadow"
     >
       <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-black mb-4 bg-gray-200 relative">
-        {imageError ? (
+        {!mentor.image || imageError ? (
           <AvatarPlaceholder />
         ) : (
           <Image
@@ -125,8 +117,10 @@ function MentorCard({
         )}
       </div>
       <h3 className="font-bold text-2xl mb-1">{mentor.name}</h3>
-      {mentor.position && (
-        <p className="text-sw-blue font-medium mb-4">{mentor.position}</p>
+      {mentor.role && (
+        <p className="text-sm font-light text-foreground/65 leading-snug max-w-[280px] mx-auto mb-4">
+          {mentor.role}
+        </p>
       )}
       {mentor.linkedInUrl && (
         <Link
