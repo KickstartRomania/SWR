@@ -7,6 +7,7 @@ export const ConstantaHowItWorksSection = () => {
     {
       id: "01",
       title: "Connect & Network",
+      description: "Meet your future co-founders. Connect with developers, designers, and enthusiasts.",
       tags: ["Icebreakers", "Networking", "Team Formation"],
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
@@ -21,6 +22,7 @@ export const ConstantaHowItWorksSection = () => {
     {
       id: "02",
       title: "Pitch Your Idea",
+      description: "Pitch your idea in 60 seconds. No slides, just your vision. Or vote for your favorites!",
       tags: ["60s Pitch", "Voting", "Selection"],
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
@@ -33,6 +35,7 @@ export const ConstantaHowItWorksSection = () => {
     {
       id: "03",
       title: "Form A Team",
+      description: "Top ideas form teams. Find the skills you need or join an inspiring project to start collaborating.",
       tags: ["Skill Matching", "Role Assignment", "Brainstorming"],
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
@@ -50,6 +53,7 @@ export const ConstantaHowItWorksSection = () => {
     {
       id: "04",
       title: "Build MVP",
+      description: "Turn concepts into prototypes. Build a Minimum Viable Product that demonstrates your core value.",
       tags: ["Prototyping", "Coding", "Designing"],
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
@@ -64,6 +68,7 @@ export const ConstantaHowItWorksSection = () => {
     {
       id: "05",
       title: "Validate & Pivot",
+      description: "Talk to real customers, validate assumptions, and pivot if necessary. Mentors will guide you.",
       tags: ["Customer Validation", "Mentorship", "Iteration"],
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
@@ -76,6 +81,7 @@ export const ConstantaHowItWorksSection = () => {
     {
       id: "06",
       title: "Demo Day",
+      description: "Pitch to a panel of judges and the community. Celebrate what you've built in just 54 hours.",
       tags: ["Final Pitch", "Judging", "Celebration"],
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
@@ -126,7 +132,11 @@ export const ConstantaHowItWorksSection = () => {
                 </div>
 
                 <span className="font-hand text-lg opacity-70 mb-1 block">Step {step.id}</span>
-                <h3 className="font-heading font-bold text-2xl mb-4 leading-tight">{step.title}</h3>
+                <h3 className="font-heading font-bold text-2xl mb-3 leading-tight">{step.title}</h3>
+                
+                <p className="font-medium text-[15px] mb-6 leading-relaxed opacity-90">
+                  {step.description}
+                </p>
 
                 <div className="flex flex-wrap gap-2">
                   {step.tags.map(tag => (
