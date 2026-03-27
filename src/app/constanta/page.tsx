@@ -49,9 +49,9 @@ export default function ConstantaPage() {
       <ConstantaHowItWorksSection />
       <ConstantaMentorsSection />
       <ConstantaAgendaSection />
-      <FAQSection />
       <ConstantaContactSection />
       <ConstantaPartnersSection />
+      <FAQSection />
       <FooterCTASection />
       <Footer />
     </div>
