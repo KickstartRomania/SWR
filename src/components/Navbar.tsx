@@ -63,7 +63,7 @@ export function Navbar() {
 
   return (
     <>
-    <header className="w-full flex items-center justify-between py-2 px-4 md:py-3 md:px-12 sticky top-0 bg-white z-[100]">
+    <header className={`w-full flex items-center justify-between px-4 md:px-12 sticky top-0 bg-white z-[100] transition-all duration-300 ease-in-out ${isScrolled ? 'py-1 md:py-2' : 'py-2 md:py-3'}`}>
       {/* Playful Logo */}
       <Link href="/">
       <Image
@@ -71,7 +71,7 @@ export function Navbar() {
         alt="Startup Weekend Romania Logo"
         width={140}
         height={60}
-        className="w-28 md:w-36 h-auto object-contain"
+        className={`h-auto object-contain transition-all duration-300 ease-in-out ${isScrolled ? 'w-16 md:w-20' : 'w-28 md:w-36'}`}
       />
       </Link>
 
