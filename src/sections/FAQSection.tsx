@@ -105,16 +105,6 @@ export const FAQSection = () => {
           })}
         </div>
 
-        {/* Still have questions? */}
-        <div className="mt-12 text-center">
-          <p className="font-hand text-2xl text-sw-navy">
-            Have other questions?
-          </p>
-          <svg className="mx-auto mt-2 text-foreground opacity-30" width="30" height="40" viewBox="0 0 30 40" fill="none">
-            <path d="M15 0 L15 35 M5 25 L15 40 L25 25" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </div>
-
       </div>
     </section>
   );
