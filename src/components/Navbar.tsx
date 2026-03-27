@@ -63,18 +63,17 @@ export function Navbar() {
 
   return (
     <>
-    <header className="w-full flex items-center justify-between p-4 md:p-6 md:px-12 relative z-50">
+    <header className="w-full flex items-center justify-between py-2 px-4 md:py-3 md:px-12 sticky top-0 bg-white z-[100] border-b-[3px] border-black">
       {/* Playful Logo */}
       <Link href="/">
       <Image
-        src="/logos/sw-weekend/nav-logo.svg"
+        src="/logos/sw-romania-techstars.png"
         alt="Startup Weekend Romania Logo"
-        width={100}
-        height={100}
-        className="w-30 h-20"
-      
+        width={140}
+        height={60}
+        className="w-28 md:w-36 h-auto object-contain"
       />
-</Link>
+      </Link>
 
       {/* Desktop Nav */}
       <nav className="hidden md:flex items-center gap-10 font-bold relative text-lg">
