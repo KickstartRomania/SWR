@@ -8,7 +8,6 @@ import {
 import { ConstantaHeroSection } from "./_components/ConstantaHeroSection";
 import { ConstantaWhatIsSection } from "./_components/ConstantaWhatIsSection";
 import { ConstantaHowItWorksSection } from "./_components/ConstantaHowItWorksSection";
-import { ConstantaAgendaSection } from "./_components/ConstantaAgendaSection";
 import { ConstantaAgendaSectionV2 } from "./_components/ConstantaAgendaSectionV2";
 import { ConstantaMentorsSection } from "./_components/ConstantaMentorsSection";
 import { ConstantaContactSection } from "./_components/ConstantaContactSection";
@@ -48,9 +47,8 @@ export default function ConstantaPage() {
       <ConstantaHeroSection />
       <ConstantaWhatIsSection />
       <ConstantaHowItWorksSection />
-      <ConstantaMentorsSection />
-      <ConstantaAgendaSection />
       <ConstantaAgendaSectionV2 />
+      <ConstantaMentorsSection />
       <ConstantaPartnersSection />
       <ConstantaContactSection />
       <FAQSection />

@@ -38,11 +38,11 @@ export function ConstantaAgendaSectionV2() {
   const [activeTab, setActiveTab] = useState<keyof typeof agenda>("Friday");
 
   return (
-    <section className="w-full bg-[#fcfcfc] py-24 md:py-32 relative overflow-hidden">
+    <section className="w-full bg-[#fcfcfc] py-16 md:py-20 relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 relative z-10">
 
         {/* Header */}
-        <div className="text-center mb-16 relative">
+        <div className="text-center mb-10 relative">
           <h2 className="font-heading font-bold text-5xl md:text-7xl mb-4 relative inline-block">
             AGENDA
             <svg className="absolute -bottom-6 left-0 w-full h-8 text-sw-blue" viewBox="0 0 300 20" fill="none" preserveAspectRatio="none">
@@ -55,7 +55,7 @@ export function ConstantaAgendaSectionV2() {
         </div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
           {(Object.keys(agenda) as Array<keyof typeof agenda>).map((day) => (
             <button
               key={day}
@@ -80,27 +80,43 @@ export function ConstantaAgendaSectionV2() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="space-y-6"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 items-start"
             >
-              {agenda[activeTab].map((item, index) => (
-                <motion.div 
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  key={index} 
-                  className="bg-white doodle-border doodle-shadow-hover rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center transition-transform duration-300"
-                >
-                  <div className="shrink-0 bg-sw-blue-washed text-sw-blue font-heading font-bold text-xl px-4 py-2 rounded-xl border-2 border-current">
-                    {item.time}
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-bold text-2xl mb-2">{item.title}</h3>
-                    {item.description && (
-                      <p className="font-medium text-foreground/80 text-lg leading-relaxed">{item.description}</p>
-                    )}
-                  </div>
-                </motion.div>
-              ))}
+              {(() => {
+                const items = agenda[activeTab];
+                const half = Math.ceil(items.length / 2);
+                const leftCol = items.slice(0, half);
+                const rightCol = items.slice(half);
+                const renderCard = (item: typeof items[0], index: number, globalIndex: number) => (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: globalIndex * 0.05 }}
+                    key={globalIndex}
+                    className="bg-white doodle-border doodle-shadow-hover rounded-2xl p-5 md:p-6 flex flex-col md:flex-row gap-4 items-start md:items-center transition-transform duration-300"
+                  >
+                    <div className="shrink-0 bg-sw-blue-washed text-sw-blue font-heading font-bold text-lg px-3 py-1.5 rounded-xl border-2 border-current">
+                      {item.time}
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-bold text-xl mb-1">{item.title}</h3>
+                      {item.description && (
+                        <p className="font-medium text-foreground/80 text-base leading-snug">{item.description}</p>
+                      )}
+                    </div>
+                  </motion.div>
+                );
+                return (
+                  <>
+                    <div className="flex flex-col gap-4 md:gap-6">
+                      {leftCol.map((item, i) => renderCard(item, i, i))}
+                    </div>
+                    <div className="flex flex-col gap-4 md:gap-6">
+                      {rightCol.map((item, i) => renderCard(item, i, half + i))}
+                    </div>
+                  </>
+                );
+              })()}
             </motion.div>
           </AnimatePresence>
         </div>

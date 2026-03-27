@@ -106,6 +106,23 @@ export function ConstantaMentorsSection() {
               <p className="text-sw-blue font-medium">{mentor.company}</p>
             </motion.div>
           ))}
+
+          {/* Teaser card */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: mentors.length * 0.1, type: "spring", stiffness: 100 }}
+            className="bg-[#fcfcfc] p-6 rounded-2xl border-2 border-dashed border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center text-center gap-3 min-h-[220px]"
+          >
+            <div className="w-14 h-14 rounded-full border-2 border-dashed border-black flex items-center justify-center text-foreground/30">
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+              </svg>
+            </div>
+            <p className="font-heading font-bold text-xl text-foreground/50">More mentors</p>
+            <p className="font-medium text-foreground/40">announced soon</p>
+          </motion.div>
         </div>
       </div>
     </section>
