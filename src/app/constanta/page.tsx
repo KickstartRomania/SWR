@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
-import { FooterCTASection, Footer } from "@/sections";
+import {
+  FooterCTASection,
+  Footer,
+} from "@/sections";
 import { ConstantaHeroSection } from "./_components/ConstantaHeroSection";
+import { ConstantaWhatIsSection } from "./_components/ConstantaWhatIsSection";
+import { ConstantaHowItWorksSection } from "./_components/ConstantaHowItWorksSection";
 import { ConstantaAgendaSection } from "./_components/ConstantaAgendaSection";
 import { ConstantaMentorsSection } from "./_components/ConstantaMentorsSection";
 import { ConstantaContactSection } from "./_components/ConstantaContactSection";
@@ -11,14 +16,14 @@ import { EVENTS } from "@/lib/events";
 import { EventJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Startup Weekend Constanța | Startup Weekend Romania",
+  title: "Startup Weekend Constanta | Startup Weekend Romania",
   description:
-    "Join Startup Weekend Constanța! Build a startup in 54 hours. Developers, designers, and idea people come together to launch something real. Sign up now!",
+    "Join Startup Weekend Constanta! Build a startup in 54 hours. Developers, designers, and idea people come together to launch something real. Sign up now!",
   alternates: { canonical: `${SITE_URL}/constanta` },
   openGraph: {
-    title: "Startup Weekend Constanța | Startup Weekend Romania",
+    title: "Startup Weekend Constanta | Startup Weekend Romania",
     description:
-      "Join Startup Weekend Constanța! Build a startup in 54 hours. Sign up now!",
+      "Join Startup Weekend Constanta! Build a startup in 54 hours. Sign up now!",
     url: `${SITE_URL}/constanta`,
   },
 };
@@ -35,12 +40,14 @@ export default function ConstantaPage() {
         location={event.location}
         address={event.address}
         googleMapsUrl={event.googleMapsUrl}
-        description="Join Startup Weekend Constanța! Build a startup in 54 hours. Developers, designers, and idea people come together to launch something real."
+        description="Join Startup Weekend Constanta! Build a startup in 54 hours. Developers, designers, and idea people come together to launch something real."
       />
       <Navbar />
       <ConstantaHeroSection />
-      <ConstantaAgendaSection />
+      <ConstantaWhatIsSection />
+      <ConstantaHowItWorksSection />
       <ConstantaMentorsSection />
+      <ConstantaAgendaSection />
       <ConstantaContactSection />
       <ConstantaPartnersSection />
       <FooterCTASection />

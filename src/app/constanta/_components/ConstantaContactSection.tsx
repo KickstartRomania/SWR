@@ -38,7 +38,40 @@ export function ConstantaContactSection() {
         </svg>
       </motion.div>
 
-      <div className="max-w-6xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div className="max-w-6xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-24 md:gap-32 items-center">
+
+        {/* Secure Your Spot CTA */}
+        <motion.div
+          id="signup"
+          initial={{ opacity: 0, scale: 0.9, y: 30 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 80, delay: 0.3 }}
+          className="bg-white text-foreground p-10 md:p-14 rounded-3xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative flex flex-col items-center text-center justify-center"
+        >
+          <svg className="absolute -top-6 -right-6 text-yellow-400 w-16 h-16 animate-pulse-slow" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+          </svg>
+
+          <h3 className="font-heading font-bold text-4xl mb-6 tracking-tight">Ready to build?</h3>
+          <p className="text-xl text-foreground/70 mb-10 max-w-sm leading-relaxed">
+            Grab your ticket today and join the most exciting 54-hour startup marathon in Constanta.
+          </p>
+
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full">
+            <DoodleButton 
+              variant="cta" 
+              className="w-full justify-center text-2xl py-6"
+              href="https://buy.stripe.com/dRmcN587HebVfLhaeL1gs05"
+            >
+              Secure your spot
+            </DoodleButton>
+          </motion.div>
+          
+          <p className="mt-6 text-sm text-foreground/40 font-mono text-center w-full">
+            LIMITED SPOTS AVAILABLE
+          </p>
+        </motion.div>
 
         {/* Contact Info */}
         <motion.div
@@ -48,7 +81,7 @@ export function ConstantaContactSection() {
           viewport={{ once: true }}
         >
           <motion.h2 variants={itemVariants} className="font-heading font-bold text-4xl md:text-5xl mb-8 relative inline-block">
-            Get in touch
+            Let's build
             <motion.div
               className="absolute -bottom-2 left-0 w-full h-2 bg-yellow-400 -z-10"
               initial={{ scaleX: 0 }}
@@ -85,54 +118,6 @@ export function ConstantaContactSection() {
               </div>
             </motion.div>
           </div>
-        </motion.div>
-
-        {/* Signup Form */}
-        <motion.div
-          id="signup"
-          initial={{ opacity: 0, scale: 0.9, y: 30 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 80, delay: 0.3 }}
-          className="bg-white text-foreground p-8 rounded-3xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative"
-        >
-          <svg className="absolute -top-6 -right-6 text-yellow-400 w-16 h-16 animate-pulse-slow" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-          </svg>
-
-          <h3 className="font-heading font-bold text-3xl mb-6">Sign up now</h3>
-
-          <form className="space-y-6">
-            <div>
-              <label className="block font-bold mb-2">Full Name</label>
-              <input type="text" placeholder="Enter your full name" className="w-full px-4 py-3 rounded-xl border-2 border-black focus:outline-none focus:ring-4 focus:ring-sw-blue/30 transition-all hover:bg-gray-50 bg-white" />
-            </div>
-
-            <div>
-              <label className="block font-bold mb-2">Email Address</label>
-              <input type="email" placeholder="your.email@example.com" className="w-full px-4 py-3 rounded-xl border-2 border-black focus:outline-none focus:ring-4 focus:ring-sw-blue/30 transition-all hover:bg-gray-50 bg-white" />
-            </div>
-
-            <div>
-              <label className="block font-bold mb-2">Phone Number</label>
-              <input type="tel" placeholder="+40 123 456 789" className="w-full px-4 py-3 rounded-xl border-2 border-black focus:outline-none focus:ring-4 focus:ring-sw-blue/30 transition-all hover:bg-gray-50 bg-white" />
-            </div>
-
-            <div>
-              <label className="block font-bold mb-2">Your Role</label>
-              <select className="w-full px-4 py-3 rounded-xl border-2 border-black focus:outline-none focus:ring-4 focus:ring-sw-blue/30 appearance-none bg-white transition-all hover:bg-gray-50 cursor-pointer">
-                <option value="">Select your role</option>
-                <option value="developer">Developer</option>
-                <option value="designer">Designer</option>
-                <option value="business">Business / Marketing</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="pt-4">
-              <DoodleButton variant="cta" className="w-full justify-center">Register Now</DoodleButton>
-            </motion.div>
-          </form>
         </motion.div>
 
       </div>

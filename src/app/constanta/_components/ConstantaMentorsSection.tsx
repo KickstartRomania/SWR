@@ -1,15 +1,36 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
-const mentors = [
-  { name: "John Doe", company: "Tech Startup Inc." },
-  { name: "Jane Smith", company: "Innovation Labs" },
-  { name: "Alex Johnson", company: "Venture Capital Co." },
-  { name: "Maria Garcia", company: "Design Studio" },
-  { name: "David Chen", company: "Software Solutions" },
-  { name: "Sarah Williams", company: "Marketing Agency" },
+type Mentor = {
+  name: string;
+  company: string;
+  image?: string;
+  linkedIn?: string;
+};
+
+const mentors: Mentor[] = [
+  {
+    name: "Cosmin Pirvu",
+    company: "Veridion",
+    image: "/images/constanta/mentors/cosmin-pirvu.png",
+    linkedIn: "https://www.linkedin.com/in/cosminpirvu/",
+  },
+  {
+    name: "George Faraunu",
+    company: "featherless.ai",
+    image: "/images/constanta/mentors/george-faraunu.png",
+    linkedIn: "https://www.linkedin.com/in/george-farauanu/",
+  },
 ];
+
+const LinkedInIcon = () => (
+  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd" />
+  </svg>
+);
 
 export function ConstantaMentorsSection() {
   return (
@@ -54,16 +75,33 @@ export function ConstantaMentorsSection() {
               }}
               className="bg-[#fcfcfc] p-6 rounded-2xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center text-center transition-all duration-300 relative group cursor-pointer"
             >
-              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-sw-blue animate-pulse-slow">
-                  <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" fill="currentColor" />
-                </svg>
-              </div>
+              {/* LinkedIn corner button */}
+              {mentor.linkedIn && (
+                <Link
+                  href={mentor.linkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  aria-label={`${mentor.name} on LinkedIn`}
+                  className="absolute top-4 right-4 w-9 h-9 rounded-full border-2 border-black flex items-center justify-center text-foreground hover:bg-sw-blue hover:text-white hover:border-sw-blue transition-colors duration-200 z-10"
+                >
+                  <LinkedInIcon />
+                </Link>
+              )}
+
+              {/* Photo */}
               <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-black mb-4 bg-gray-200 relative group-hover:border-sw-blue transition-colors duration-300">
-                <div className="w-full h-full flex items-center justify-center text-gray-400">
-                  <svg className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-                </div>
+                {mentor.image ? (
+                  <Image src={mentor.image} alt={mentor.name} fill className="object-cover" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-gray-400">
+                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                )}
               </div>
+
               <h3 className="font-bold text-2xl mb-1 group-hover:text-sw-blue transition-colors">{mentor.name}</h3>
               <p className="text-sw-blue font-medium">{mentor.company}</p>
             </motion.div>

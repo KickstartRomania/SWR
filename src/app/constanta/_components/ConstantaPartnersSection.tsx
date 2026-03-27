@@ -1,8 +1,19 @@
+import Image from "next/image";
+
 export function ConstantaPartnersSection() {
-  const partners = ["Partner 1", "Partner 2", "Partner 3"];
+  const partners = [
+    { name: "Stripe", logo: "/images/constanta/partners/stripe.png" },
+    { name: "CTT", logo: "/images/constanta/partners/ctt.png" },
+    { name: "Universitatea Ovidius", logo: "/images/constanta/partners/ovidius.png" },
+    { name: "Rarecloud", logo: "/images/constanta/partners/rarecloud.png" },
+    { name: "Flip", logo: "/images/constanta/partners/flip.png" },
+  ];
+
+  // Duplicate the list so the marquee loops seamlessly
+  const marqueePartners = [...partners, ...partners];
 
   return (
-    <section className="w-full bg-white border-y-[3px] border-foreground py-10 relative overflow-hidden flex flex-col items-center">
+    <section className="w-full bg-white border-y-[3px] border-foreground py-20 relative overflow-hidden flex flex-col items-center">
       <div className="absolute -top-4 left-4 md:left-10">
         <svg width="40" height="40" viewBox="0 0 50 50" fill="none" className="text-sw-blue opacity-50 rotate-12">
           <path d="M25 5 L28 20 L45 25 L28 30 L25 45 L22 30 L5 25 L22 20 Z" fill="currentColor"/>
@@ -14,23 +25,34 @@ export function ConstantaPartnersSection() {
         </svg>
       </div>
 
-      <p className="font-hand text-xl md:text-2xl text-foreground/80 mb-6 -rotate-2 relative z-10">
+      <p className="font-hand text-xl md:text-2xl text-foreground/80 mb-10 -rotate-1 relative z-10">
         Our partners
       </p>
 
-      <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16 px-8 relative z-10">
-        {partners.map((partner, index) => (
-          <div
-            key={index}
-            className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-all duration-300"
-          >
-            <div className="w-10 h-10 rounded-full bg-foreground flex items-center justify-center text-white font-bold text-sm">
-              {index + 1}
+      {/* Fade edges */}
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-white to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-white to-transparent z-10" />
+
+      <div className="w-full overflow-hidden relative z-0">
+        <div
+          className="flex items-center gap-16 md:gap-24 w-max animate-marquee"
+        >
+          {marqueePartners.map((partner, index) => (
+            <div
+              key={index}
+              className="relative h-20 md:h-28 w-44 md:w-60 flex-shrink-0"
+            >
+              <Image
+                src={partner.logo}
+                alt={partner.name}
+                fill
+                className="object-contain"
+              />
             </div>
-            <span className="font-heading font-bold text-2xl md:text-3xl">{partner}</span>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+
     </section>
   );
 }

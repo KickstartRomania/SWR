@@ -2,8 +2,11 @@ export const EVENTS = {
   bucharest: {
     name: "Startup Weekend Bucharest",
     city: "Bucharest",
-    startDate: "2025-10-18",
-    endDate: "2025-10-20",
+    startDate: "2026-04-24",
+    endDate: "2026-04-26",
+    location: "Nova",
+    address: "Strada Academiei 28-30",
+    googleMapsUrl: "https://share.google/CISroZY1ZlhDDfoMF",
   },
   cluj: {
     name: "Startup Weekend Cluj",
@@ -12,8 +15,8 @@ export const EVENTS = {
     endDate: "2025-10-20",
   },
   constanta: {
-    name: "Startup Weekend Constanța",
-    city: "Constanța",
+    name: "Startup Weekend Constanta",
+    city: "Constanta",
     startDate: "2026-04-17",
     endDate: "2026-04-19",
     location: "Marco Business Center",

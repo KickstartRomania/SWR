@@ -81,7 +81,7 @@ export function BucharestContactSection() {
           viewport={{ once: true }}
         >
           <motion.h2 variants={itemVariants} className="font-heading font-bold text-4xl md:text-5xl mb-8 relative inline-block">
-            Get in touch
+            Let's build
             <motion.div
               className="absolute -bottom-2 left-0 w-full h-2 bg-yellow-400 -z-10"
               initial={{ scaleX: 0 }}

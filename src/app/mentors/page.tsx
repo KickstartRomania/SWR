@@ -20,7 +20,7 @@ type Mentor = {
 const CITIES: { id: CityId; label: string; folder: string }[] = [
   { id: "bucharest", label: "Bucharest", folder: "bucharest" },
   { id: "cluj", label: "Cluj", folder: "cluj" },
-  { id: "constanta", label: "Constanța", folder: "constanta" },
+  { id: "constanta", label: "Constanta", folder: "constanta" },
   { id: "oradea", label: "Oradea", folder: "oradea" },
   // Folder on disk is "targujiu"
   { id: "targu-jiu", label: "Târgu Jiu", folder: "targujiu" },
