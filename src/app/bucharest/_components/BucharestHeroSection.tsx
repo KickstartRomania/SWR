@@ -165,7 +165,7 @@ export function BucharestHeroSection() {
           variants={textBlurVariants}
           className="mt-8 font-medium text-lg md:text-xl text-foreground/80 max-w-2xl leading-relaxed"
         >
-          Join the vibe. At Bucharest Startup Weekend developers, designers, marketers, and idea people come together to launch something real.
+          Build a startup in one weekend.
         </motion.p>
 
         <motion.div

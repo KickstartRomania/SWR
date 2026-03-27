@@ -170,7 +170,7 @@ export function ConstantaHeroSection() {
           variants={textBlurVariants}
           className="mt-8 font-medium text-lg md:text-xl text-foreground/80 max-w-2xl leading-relaxed"
         >
-          Join the vibe. Constanta Startup Weekend
+          Build a startup in one weekend.
         </motion.p>
 
         <motion.div
