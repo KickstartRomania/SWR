@@ -177,7 +177,7 @@ export function ConstantaHeroSection() {
           variants={itemVariants}
           className="mt-12 relative"
         >
-          <DoodleButton variant="cta">Join the vibe</DoodleButton>
+          <DoodleButton variant="cta">Secure your spot!</DoodleButton>
         </motion.div>
 
         <motion.div
