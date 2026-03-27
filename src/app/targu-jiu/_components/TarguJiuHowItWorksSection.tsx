@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export const BucharestHowItWorksSection = () => {
+export const TarguJiuHowItWorksSection = () => {
   const steps = [
     {
       id: "01",

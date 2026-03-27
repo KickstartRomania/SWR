@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { FooterCTASection, Footer } from "@/sections";
 import { ClujHeroSection } from "./_components/ClujHeroSection";
+import { ClujWhatIsSection } from "./_components/ClujWhatIsSection";
+import { ClujHowItWorksSection } from "./_components/ClujHowItWorksSection";
 import { ClujAgendaSection } from "./_components/ClujAgendaSection";
 import { ClujMentorsSection } from "./_components/ClujMentorsSection";
 import { ClujContactSection } from "./_components/ClujContactSection";
@@ -37,6 +39,8 @@ export default function ClujPage() {
       />
       <Navbar />
       <ClujHeroSection />
+      <ClujWhatIsSection />
+      <ClujHowItWorksSection />
       <ClujAgendaSection />
       <ClujMentorsSection />
       <ClujContactSection />

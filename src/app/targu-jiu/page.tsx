@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { FooterCTASection, Footer } from "@/sections";
 import { TarguJiuHeroSection } from "./_components/TarguJiuHeroSection";
+import { TarguJiuWhatIsSection } from "./_components/TarguJiuWhatIsSection";
+import { TarguJiuHowItWorksSection } from "./_components/TarguJiuHowItWorksSection";
 import { TarguJiuAgendaSection } from "./_components/TarguJiuAgendaSection";
 import { TarguJiuMentorsSection } from "./_components/TarguJiuMentorsSection";
 import { TarguJiuContactSection } from "./_components/TarguJiuContactSection";
@@ -37,6 +39,8 @@ export default function TarguJiuPage() {
       />
       <Navbar />
       <TarguJiuHeroSection />
+      <TarguJiuWhatIsSection />
+      <TarguJiuHowItWorksSection />
       <TarguJiuAgendaSection />
       <TarguJiuMentorsSection />
       <TarguJiuContactSection />

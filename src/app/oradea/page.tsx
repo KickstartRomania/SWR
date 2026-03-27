@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { FooterCTASection, Footer } from "@/sections";
 import { OradeaHeroSection } from "./_components/OradeaHeroSection";
+import { OradeaWhatIsSection } from "./_components/OradeaWhatIsSection";
+import { OradeaHowItWorksSection } from "./_components/OradeaHowItWorksSection";
 import { OradeaAgendaSection } from "./_components/OradeaAgendaSection";
 import { OradeaMentorsSection } from "./_components/OradeaMentorsSection";
 import { OradeaContactSection } from "./_components/OradeaContactSection";
@@ -37,6 +39,8 @@ export default function OradeaPage() {
       />
       <Navbar />
       <OradeaHeroSection />
+      <OradeaWhatIsSection />
+      <OradeaHowItWorksSection />
       <OradeaAgendaSection />
       <OradeaMentorsSection />
       <OradeaContactSection />
