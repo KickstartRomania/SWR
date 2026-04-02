@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { DoodleButton } from "@/components/DoodleButton";
 import { motion } from "framer-motion";
 
@@ -142,7 +141,7 @@ export function HeroSection() {
           variants={itemVariants}
           className="mt-12 relative"
         >
-          <DoodleButton variant="cta" href="#past-events">Join the vibe</DoodleButton>
+          <DoodleButton variant="cta" href="#next-events">Join an event</DoodleButton>
         </motion.div>
 
         {/* Wavy line separator */}

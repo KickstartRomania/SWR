@@ -37,7 +37,8 @@ export function EventsSection() {
   ];
 
   return (
-    <section id="past-events" className="w-full  py-32 px-6 relative overflow-hidden">
+    <section id="next-events" className="w-full  py-32 px-6 relative overflow-hidden">
+      <div id="past-events" className="absolute -top-24" aria-hidden="true" />
       <div className="max-w-7xl mx-auto">
 
         <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-6 relative z-30">
