@@ -177,7 +177,14 @@ export function ConstantaHeroSection() {
           variants={itemVariants}
           className="mt-12 relative"
         >
-          <DoodleButton variant="cta">Secure your spot!</DoodleButton>
+          <DoodleButton
+            variant="cta"
+            href="https://buy.stripe.com/dRmcN587HebVfLhaeL1gs05"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Secure your spot!
+          </DoodleButton>
         </motion.div>
 
         <motion.div

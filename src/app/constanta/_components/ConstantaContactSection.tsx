@@ -63,6 +63,8 @@ export function ConstantaContactSection() {
               variant="cta" 
               className="w-full justify-center text-2xl py-6"
               href="https://buy.stripe.com/dRmcN587HebVfLhaeL1gs05"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Secure your spot
             </DoodleButton>
@@ -81,7 +83,7 @@ export function ConstantaContactSection() {
           viewport={{ once: true }}
         >
           <motion.h2 variants={itemVariants} className="font-heading font-bold text-4xl md:text-5xl mb-8 relative inline-block">
-            Let's build
+            Let&apos;s build
             <motion.div
               className="absolute -bottom-2 left-0 w-full h-2 bg-yellow-400 -z-10"
               initial={{ scaleX: 0 }}
