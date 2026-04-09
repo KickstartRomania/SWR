@@ -1,0 +1,57 @@
+{
+  "app": {
+    "[project]/src/app/_not-found/page": [
+      "static/media/5d52bd6c4cb3f315-s.p.610fd2a3.woff2",
+      "static/media/5c285b27cdda1fe8-s.p.a62025f2.woff2",
+      "static/media/a85fe84266768609-s.p.e658778d.woff2"
+    ],
+    "[project]/src/app/bucharest/page": [
+      "static/media/5d52bd6c4cb3f315-s.p.610fd2a3.woff2",
+      "static/media/5c285b27cdda1fe8-s.p.a62025f2.woff2",
+      "static/media/a85fe84266768609-s.p.e658778d.woff2"
+    ],
+    "[project]/src/app/cluj/page": [
+      "static/media/5d52bd6c4cb3f315-s.p.610fd2a3.woff2",
+      "static/media/5c285b27cdda1fe8-s.p.a62025f2.woff2",
+      "static/media/a85fe84266768609-s.p.e658778d.woff2"
+    ],
+    "[project]/src/app/constanta/page": [
+      "static/media/5d52bd6c4cb3f315-s.p.610fd2a3.woff2",
+      "static/media/5c285b27cdda1fe8-s.p.a62025f2.woff2",
+      "static/media/a85fe84266768609-s.p.e658778d.woff2"
+    ],
+    "[project]/src/app/contact/page": [
+      "static/media/5d52bd6c4cb3f315-s.p.610fd2a3.woff2",
+      "static/media/5c285b27cdda1fe8-s.p.a62025f2.woff2",
+      "static/media/a85fe84266768609-s.p.e658778d.woff2"
+    ],
+    "[project]/src/app/host/page": [
+      "static/media/5d52bd6c4cb3f315-s.p.610fd2a3.woff2",
+      "static/media/5c285b27cdda1fe8-s.p.a62025f2.woff2",
+      "static/media/a85fe84266768609-s.p.e658778d.woff2"
+    ],
+    "[project]/src/app/mentors/page": [
+      "static/media/5d52bd6c4cb3f315-s.p.610fd2a3.woff2",
+      "static/media/5c285b27cdda1fe8-s.p.a62025f2.woff2",
+      "static/media/a85fe84266768609-s.p.e658778d.woff2"
+    ],
+    "[project]/src/app/oradea/page": [
+      "static/media/5d52bd6c4cb3f315-s.p.610fd2a3.woff2",
+      "static/media/5c285b27cdda1fe8-s.p.a62025f2.woff2",
+      "static/media/a85fe84266768609-s.p.e658778d.woff2"
+    ],
+    "[project]/src/app/page": [
+      "static/media/5d52bd6c4cb3f315-s.p.610fd2a3.woff2",
+      "static/media/5c285b27cdda1fe8-s.p.a62025f2.woff2",
+      "static/media/a85fe84266768609-s.p.e658778d.woff2"
+    ],
+    "[project]/src/app/targu-jiu/page": [
+      "static/media/5d52bd6c4cb3f315-s.p.610fd2a3.woff2",
+      "static/media/5c285b27cdda1fe8-s.p.a62025f2.woff2",
+      "static/media/a85fe84266768609-s.p.e658778d.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

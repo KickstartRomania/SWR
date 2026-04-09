@@ -1,0 +1,3 @@
+module.exports=[41191,a=>{"use strict";var b=a.i(3071);let c={title:"Host Startup Weekend | Startup Weekend Romania",description:"Apply to host Startup Weekend in your city. Become a facilitator and help entrepreneurs build startups in 54 hours.",alternates:{canonical:`${b.SITE_URL}/host`},openGraph:{title:"Host Startup Weekend | Startup Weekend Romania",description:"Apply to host Startup Weekend in your city. Become a facilitator and help entrepreneurs build startups in 54 hours.",url:`${b.SITE_URL}/host`}};function d({children:a}){return a}a.s(["default",()=>d,"metadata",0,c])}];
+
+//# sourceMappingURL=src_app_host_layout_tsx_bf50e164._.js.map

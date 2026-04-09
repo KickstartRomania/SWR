@@ -1,0 +1,230 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    },
+    {
+      "source": "/bucharest/",
+      "destination": "/bucharest",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/bucharest/(?:/)?$"
+    },
+    {
+      "source": "/cluj/",
+      "destination": "/cluj",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/cluj/(?:/)?$"
+    },
+    {
+      "source": "/constanta/",
+      "destination": "/constanta",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/constanta/(?:/)?$"
+    },
+    {
+      "source": "/targu-jiu/",
+      "destination": "/targu-jiu",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/targu-jiu/(?:/)?$"
+    },
+    {
+      "source": "/oradea/",
+      "destination": "/oradea",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/oradea/(?:/)?$"
+    },
+    {
+      "source": "/mentors-speakers/",
+      "destination": "/mentors",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/mentors-speakers/(?:/)?$"
+    },
+    {
+      "source": "/team-contact/",
+      "destination": "/contact",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/team-contact/(?:/)?$"
+    },
+    {
+      "source": "/faq/",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/faq/(?:/)?$"
+    },
+    {
+      "source": "/cookie-policy-eu/",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/cookie-policy-eu/(?:/)?$"
+    },
+    {
+      "source": "/volunteer/",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/volunteer/(?:/)?$"
+    },
+    {
+      "source": "/mentors-speakers-2/",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/mentors-speakers-2/(?:/)?$"
+    },
+    {
+      "source": "/sponsorspartners-2/",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/sponsorspartners-2/(?:/)?$"
+    },
+    {
+      "source": "/cities/",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/cities/(?:/)?$"
+    },
+    {
+      "source": "/sponsorspartners/",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/sponsorspartners/(?:/)?$"
+    },
+    {
+      "source": "/ticket/",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/ticket/(?:/)?$"
+    },
+    {
+      "source": "/agenda/",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/agenda/(?:/)?$"
+    },
+    {
+      "source": "/shadowing/",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/shadowing/(?:/)?$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/bucharest",
+      "regex": "^/bucharest(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/bucharest(?:/)?$"
+    },
+    {
+      "page": "/cluj",
+      "regex": "^/cluj(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/cluj(?:/)?$"
+    },
+    {
+      "page": "/constanta",
+      "regex": "^/constanta(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/constanta(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/host",
+      "regex": "^/host(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/host(?:/)?$"
+    },
+    {
+      "page": "/mentors",
+      "regex": "^/mentors(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mentors(?:/)?$"
+    },
+    {
+      "page": "/oradea",
+      "regex": "^/oradea(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/oradea(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    },
+    {
+      "page": "/targu-jiu",
+      "regex": "^/targu\\-jiu(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/targu\\-jiu(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

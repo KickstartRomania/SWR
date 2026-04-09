@@ -1,0 +1,3 @@
+module.exports=[37064,a=>{"use strict";var b=a.i(3071);let c={title:"Contact | Startup Weekend Romania",description:"Have questions about Startup Weekend Romania? Want to partner with us or get in touch? We'd love to hear from you!",alternates:{canonical:`${b.SITE_URL}/contact`},openGraph:{title:"Contact | Startup Weekend Romania",description:"Have questions about Startup Weekend Romania? Want to partner with us or get in touch? We'd love to hear from you!",url:`${b.SITE_URL}/contact`}};function d({children:a}){return a}a.s(["default",()=>d,"metadata",0,c])}];
+
+//# sourceMappingURL=src_app_contact_layout_tsx_e0aa5d95._.js.map

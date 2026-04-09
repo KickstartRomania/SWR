@@ -1,0 +1,3 @@
+module.exports=[42905,a=>{"use strict";var b=a.i(3071);let c={title:"Mentors | Startup Weekend Romania",description:"Meet the expert mentors who will guide you through building and validating your startup idea at Startup Weekend Romania.",alternates:{canonical:`${b.SITE_URL}/mentors`},openGraph:{title:"Mentors | Startup Weekend Romania",description:"Meet the expert mentors who will guide you through building and validating your startup idea at Startup Weekend Romania.",url:`${b.SITE_URL}/mentors`}};function d({children:a}){return a}a.s(["default",()=>d,"metadata",0,c])}];
+
+//# sourceMappingURL=src_app_mentors_layout_tsx_42fa3fcf._.js.map
