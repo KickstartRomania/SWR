@@ -173,7 +173,7 @@ export const constantaMentors: MentorEntry[] = [
   },
   {
     name: "Paul Burcă",
-    role: "Founder @ Assista AI",
+    role: "Founder @ Assista",
     order: 2,
     image: "/images/constanta/mentors/paul-burca.jpg",
   },
