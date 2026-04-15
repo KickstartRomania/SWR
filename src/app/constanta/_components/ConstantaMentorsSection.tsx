@@ -43,6 +43,12 @@ const mentors: Mentor[] = [
     image: "/images/constanta/mentors/teodora-moraru.jpg",
     linkedIn: "https://www.linkedin.com/in/teodora-moraru-7582bb183/",
   },
+  {
+    name: "Costin Sorici",
+    company: "Neuron English",
+    image: "/images/constanta/mentors/costin-sorici.jpg",
+    linkedIn: "https://www.linkedin.com/in/costin-sorici-888904/",
+  },
 ];
 
 const LinkedInIcon = () => (
