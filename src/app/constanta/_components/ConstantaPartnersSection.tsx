@@ -7,6 +7,10 @@ export function ConstantaPartnersSection() {
     { name: "Universitatea Ovidius", logo: "/images/constanta/partners/ovidius.png" },
     { name: "Rarecloud", logo: "/images/constanta/partners/rarecloud.png" },
     { name: "Flip", logo: "/images/constanta/partners/flip.png" },
+    { name: "Featherless", logo: "/images/constanta/partners/featherless.png" },
+    { name: "Kickstart", logo: "/images/constanta/partners/kickstart.png" },
+    { name: "Refold", logo: "/images/constanta/partners/refold.png" },
+    { name: "Startup Weekend Romania", logo: "/images/constanta/partners/swro.png" },
   ];
 
   // Duplicate the list so the marquee loops seamlessly
