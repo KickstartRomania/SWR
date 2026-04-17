@@ -49,6 +49,30 @@ const mentors: Mentor[] = [
     image: "/images/constanta/mentors/costin-sorici.jpg",
     linkedIn: "https://www.linkedin.com/in/costin-sorici-888904/",
   },
+  {
+    name: "Daniel Draga",
+    company: "Platform as a Service",
+    image: "/images/constanta/mentors/daniel-draga.jpeg",
+    linkedIn: "https://www.linkedin.com/in/daniel-draga/",
+  },
+  {
+    name: "Catalin Draga",
+    company: "KubeSage",
+    image: "/images/constanta/mentors/catalin-draga.jpeg",
+    linkedIn: "https://www.linkedin.com/in/catalin-draga/",
+  },
+  {
+    name: "Mihai Dragan",
+    company: "Oveit",
+    image: "/images/constanta/mentors/mihai-dragan.jpeg",
+    linkedIn: "https://www.linkedin.com/in/mihaidragan/",
+  },
+  {
+    name: "Cosmin Budinschi",
+    company: "Software Architect",
+    image: "/images/constanta/mentors/cosmin-budinschi.jpeg",
+    linkedIn: "https://www.linkedin.com/in/budinschi/",
+  },
 ];
 
 const LinkedInIcon = () => (

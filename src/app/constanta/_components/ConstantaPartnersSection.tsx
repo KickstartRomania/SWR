@@ -10,6 +10,7 @@ export function ConstantaPartnersSection() {
     { name: "Featherless", logo: "/images/constanta/partners/featherless.png" },
     { name: "Kickstart", logo: "/images/constanta/partners/kickstart.png" },
     { name: "Refold", logo: "/images/constanta/partners/refold.png" },
+    { name: "How to Web", logo: "/images/constanta/partners/htw.png" },
     { name: "Startup Weekend Romania", logo: "/images/constanta/partners/swro.png" },
   ];
 
