@@ -10,6 +10,7 @@ import { ConstantaWhatIsSection } from "./_components/ConstantaWhatIsSection";
 import { ConstantaHowItWorksSection } from "./_components/ConstantaHowItWorksSection";
 import { ConstantaAgendaSectionV2 } from "./_components/ConstantaAgendaSectionV2";
 import { ConstantaMentorsSection } from "./_components/ConstantaMentorsSection";
+import { ConstantaJudgesSection } from "./_components/ConstantaJudgesSection";
 import { ConstantaContactSection } from "./_components/ConstantaContactSection";
 import { ConstantaPartnersSection } from "./_components/ConstantaPartnersSection";
 import { SITE_URL } from "@/lib/constants";
@@ -49,6 +50,7 @@ export default function ConstantaPage() {
       <ConstantaHowItWorksSection />
       <ConstantaAgendaSectionV2 />
       <ConstantaMentorsSection />
+      <ConstantaJudgesSection />
       <ConstantaPartnersSection />
       <ConstantaContactSection />
       <FAQSection />
