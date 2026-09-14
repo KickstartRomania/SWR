@@ -33,7 +33,21 @@ export function EventsSection() {
       initialX: -80,
       initialY: -15,
       initialRotate: 0,
-    }
+    },
+    {
+      city: "Iasi",
+      location: "Venue announced soon",
+      slug: "iasi",
+      date: "16-18",
+      month: "October",
+      color: "bg-sw-blue",
+      rotation: -4,
+      xOffset: 20,
+      yOffset: 20,
+      initialX: 40,
+      initialY: 15,
+      initialRotate: 0,
+    },
   ];
 
   return (

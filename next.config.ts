@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       { source: "/bucharest/", destination: "/bucharest", permanent: true },
       { source: "/cluj/", destination: "/cluj", permanent: true },
       { source: "/constanta/", destination: "/constanta", permanent: true },
+      { source: "/iasi/", destination: "/iasi", permanent: true },
       { source: "/targu-jiu/", destination: "/targu-jiu", permanent: true },
       { source: "/oradea/", destination: "/oradea", permanent: true },
       { source: "/mentors-speakers/", destination: "/mentors", permanent: true },

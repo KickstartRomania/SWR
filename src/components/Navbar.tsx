@@ -10,6 +10,7 @@ const SCROLL_THRESHOLD = 80;
 const CITIES: { name: string; href: string }[] = [
   { name: "Bucharest", href: "/bucharest" },
   { name: "Constanta", href: "/constanta" },
+  { name: "Iasi", href: "/iasi" },
   { name: "Târgu Jiu", href: "/targu-jiu" },
   { name: "Cluj", href: "/cluj" },
   { name: "Oradea", href: "/oradea" },

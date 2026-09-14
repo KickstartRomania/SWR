@@ -23,6 +23,13 @@ export const EVENTS = {
     address: "Aurel Vlaicu 251",
     googleMapsUrl: "https://maps.app.goo.gl/TjbAshKkzzJhpUgv6",
   },
+  iasi: {
+    name: "Startup Weekend Iasi",
+    city: "Iasi",
+    startDate: "2026-10-16",
+    endDate: "2026-10-18",
+    location: "Venue announced soon",
+  },
   oradea: {
     name: "Startup Weekend Oradea",
     city: "Oradea",

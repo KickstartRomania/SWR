@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { DoodleButton } from "@/components/DoodleButton";
 
 const CITIES = [
   { name: "Bucharest", href: "/bucharest" },
   { name: "Constanta", href: "/constanta" },
+  { name: "Iasi", href: "/iasi" },
   { name: "Târgu Jiu", href: "/targu-jiu" },
   { name: "Cluj", href: "/cluj" },
   { name: "Oradea", href: "/oradea" },

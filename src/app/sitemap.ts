@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "bucharest", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "cluj", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "constanta", priority: 0.9, changeFrequency: "weekly" as const },
+    { path: "iasi", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "oradea", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "targu-jiu", priority: 0.9, changeFrequency: "weekly" as const },
   ];
