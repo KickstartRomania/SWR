@@ -116,7 +116,7 @@ export function BucharestHeroSection() {
         className="flex flex-col items-center z-10 w-full"
       >
         <motion.span variants={itemVariants} className="font-hand text-2xl md:text-3xl text-sw-blue mb-4 rotate-[-2deg]">
-          Next event: 24-26 April 2026
+          Next event: 16-18 October 2026
         </motion.span>
 
         <h1 className="font-heading font-bold text-5xl md:text-7xl lg:text-8xl leading-[1.1] md:leading-[1.1] tracking-tight max-w-4xl relative z-10">
@@ -172,7 +172,14 @@ export function BucharestHeroSection() {
           variants={itemVariants}
           className="mt-12 relative"
         >
-          <DoodleButton variant="cta">Secure your spot!</DoodleButton>
+          <DoodleButton
+            variant="cta"
+            href="https://startupweekendbucharest.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Find more info and sign up
+          </DoodleButton>
         </motion.div>
 
         {/* Wavy line separator */}

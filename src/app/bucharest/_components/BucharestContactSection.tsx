@@ -55,16 +55,18 @@ export function BucharestContactSection() {
 
           <h3 className="font-heading font-bold text-4xl mb-6 tracking-tight">Ready to build?</h3>
           <p className="text-xl text-foreground/70 mb-10 max-w-sm leading-relaxed">
-            Grab your ticket today and join the most exciting 54-hour startup marathon in Bucharest.
+            Visit the Bucharest event website for full details and registration.
           </p>
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full">
             <DoodleButton
               variant="cta"
               className="w-full justify-center text-2xl py-6"
-              href="https://buy.stripe.com/4gMbJ1gEdaZJeHddqX1gs04"
+              href="https://startupweekendbucharest.com/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Secure your spot
+              Find more info and sign up
             </DoodleButton>
           </motion.div>
 
