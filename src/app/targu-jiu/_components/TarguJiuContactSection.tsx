@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { DoodleButton } from "@/components/DoodleButton";
+import { EventRegistrationForm } from "@/components/EventRegistrationForm";
 
 export function TarguJiuContactSection() {
   const containerVariants = {
@@ -103,37 +103,7 @@ export function TarguJiuContactSection() {
 
           <h3 className="font-heading font-bold text-3xl mb-6">Sign up now</h3>
 
-          <form className="space-y-6">
-            <div>
-              <label className="block font-bold mb-2">Full Name</label>
-              <input type="text" placeholder="Enter your full name" className="w-full px-4 py-3 rounded-xl border-2 border-black focus:outline-none focus:ring-4 focus:ring-sw-blue/30 transition-all hover:bg-gray-50 bg-white" />
-            </div>
-
-            <div>
-              <label className="block font-bold mb-2">Email Address</label>
-              <input type="email" placeholder="your.email@example.com" className="w-full px-4 py-3 rounded-xl border-2 border-black focus:outline-none focus:ring-4 focus:ring-sw-blue/30 transition-all hover:bg-gray-50 bg-white" />
-            </div>
-
-            <div>
-              <label className="block font-bold mb-2">Phone Number</label>
-              <input type="tel" placeholder="+40 123 456 780" className="w-full px-4 py-3 rounded-xl border-2 border-black focus:outline-none focus:ring-4 focus:ring-sw-blue/30 transition-all hover:bg-gray-50 bg-white" />
-            </div>
-
-            <div>
-              <label className="block font-bold mb-2">Your Role</label>
-              <select className="w-full px-4 py-3 rounded-xl border-2 border-black focus:outline-none focus:ring-4 focus:ring-sw-blue/30 appearance-none bg-white transition-all hover:bg-gray-50 cursor-pointer">
-                <option value="">Select your role</option>
-                <option value="developer">Developer</option>
-                <option value="designer">Designer</option>
-                <option value="business">Business / Marketing</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="pt-4">
-              <DoodleButton variant="cta" className="w-full justify-center">Register Now</DoodleButton>
-            </motion.div>
-          </form>
+          <EventRegistrationForm city="targu-jiu" />
         </motion.div>
 
       </div>
