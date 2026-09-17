@@ -95,7 +95,7 @@ export function TarguJiuContactSection() {
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ type: "spring", stiffness: 80, delay: 0.3 }}
-          className="bg-white text-foreground p-8 rounded-3xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative"
+          className="scroll-mt-24 bg-white text-foreground p-8 rounded-3xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative"
         >
           <svg className="absolute -top-6 -right-6 text-yellow-400 w-16 h-16 animate-pulse-slow" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />

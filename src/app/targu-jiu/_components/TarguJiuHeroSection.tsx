@@ -166,7 +166,7 @@ export function TarguJiuHeroSection() {
           variants={itemVariants}
           className="mt-12 relative"
         >
-          <DoodleButton variant="cta">Secure your spot!</DoodleButton>
+          <DoodleButton variant="cta" href="#signup">Secure your spot!</DoodleButton>
         </motion.div>
 
         <motion.div
