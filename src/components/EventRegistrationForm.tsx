@@ -130,9 +130,12 @@ export function EventRegistrationForm({ city }: { city: "targu-jiu" }) {
             className="w-full px-4 py-3 rounded-xl border-2 border-black focus:outline-none focus:ring-4 focus:ring-sw-blue/30 appearance-none bg-white transition-all hover:bg-gray-50 cursor-pointer"
           >
             <option value="" disabled>Select your role</option>
+            <option value="marketeer">Marketeer</option>
             <option value="developer">Developer</option>
             <option value="designer">Designer</option>
-            <option value="business">Business / Marketing</option>
+            <option value="founder">Founder</option>
+            <option value="product">Product</option>
+            <option value="business">Business</option>
             <option value="other">Other</option>
           </select>
         </div>

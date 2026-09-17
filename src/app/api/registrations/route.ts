@@ -1,7 +1,15 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 
 const ALLOWED_CITIES = new Set(["targu-jiu"]);
-const ALLOWED_ROLES = new Set(["developer", "designer", "business", "other"]);
+const ALLOWED_ROLES = new Set([
+  "marketeer",
+  "developer",
+  "designer",
+  "founder",
+  "product",
+  "business",
+  "other",
+]);
 
 type RegistrationPayload = {
   city?: unknown;
