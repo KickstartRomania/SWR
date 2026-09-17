@@ -18,7 +18,8 @@ type SubmissionState =
 
 export function EventRegistrationForm({ city }: { city: "targu-jiu" }) {
   const [submission, setSubmission] = useState<SubmissionState>({ status: "idle" });
-  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const turnstileSiteKey =
+    process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "0x4AAAAAAE6qpkNlMyLNSybz";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
