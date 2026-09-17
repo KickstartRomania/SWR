@@ -70,7 +70,7 @@ export function IasiContactSection() {
             </DoodleButton>
             <DoodleButton
               variant="cta"
-              className="w-full justify-center text-2xl py-6 bg-white text-sw-blue"
+              className="w-full justify-center text-2xl py-6 !bg-white !text-black"
               href="https://buy.stripe.com/4gM5kD0Ffgk31Ur3Qn1gs0b"
               target="_blank"
               rel="noopener noreferrer"

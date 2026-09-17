@@ -187,7 +187,7 @@ export function IasiHeroSection() {
             href="https://buy.stripe.com/4gM5kD0Ffgk31Ur3Qn1gs0b"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-sw-blue"
+            className="!bg-white !text-black"
           >
             Student admission
           </DoodleButton>
