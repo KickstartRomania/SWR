@@ -55,21 +55,32 @@ export function IasiContactSection() {
 
           <h3 className="font-heading font-bold text-4xl mb-6 tracking-tight">Ready to build?</h3>
           <p className="text-xl text-foreground/70 mb-10 max-w-sm leading-relaxed">
-            Join us in Iasi for a 54-hour startup marathon. Ticket details are coming soon.
+            Join us in Iasi for a 54-hour startup marathon. Choose the ticket that fits you.
           </p>
 
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full">
+          <div className="w-full flex flex-col gap-4">
             <DoodleButton 
               variant="cta" 
               className="w-full justify-center text-2xl py-6"
-              href="mailto:hi@startupweekendromania.com?subject=Startup%20Weekend%20Iasi"
+              href="https://buy.stripe.com/bJe7sLafPaZJdD94Ur1gs0a"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Ask about tickets
+              General admission
             </DoodleButton>
-          </motion.div>
+            <DoodleButton
+              variant="cta"
+              className="w-full justify-center text-2xl py-6 bg-white text-sw-blue"
+              href="https://buy.stripe.com/4gM5kD0Ffgk31Ur3Qn1gs0b"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Student admission
+            </DoodleButton>
+          </div>
           
           <p className="mt-6 text-sm text-foreground/40 font-mono text-center w-full">
-            TICKETS ANNOUNCED SOON
+            LIMITED SPOTS AVAILABLE
           </p>
         </motion.div>
 

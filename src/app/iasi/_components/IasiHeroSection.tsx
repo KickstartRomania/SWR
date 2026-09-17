@@ -172,13 +172,24 @@ export function IasiHeroSection() {
 
         <motion.div
           variants={itemVariants}
-          className="mt-12 relative"
+          className="mt-12 relative flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <DoodleButton
             variant="cta"
-            href="#signup"
+            href="https://buy.stripe.com/bJe7sLafPaZJdD94Ur1gs0a"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Event details
+            General admission
+          </DoodleButton>
+          <DoodleButton
+            variant="cta"
+            href="https://buy.stripe.com/4gM5kD0Ffgk31Ur3Qn1gs0b"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-sw-blue"
+          >
+            Student admission
           </DoodleButton>
         </motion.div>
 
