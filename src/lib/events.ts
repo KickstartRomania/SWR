@@ -39,7 +39,7 @@ export const EVENTS = {
   "targu-jiu": {
     name: "Startup Weekend Târgu Jiu",
     city: "Târgu Jiu",
-    startDate: "2025-10-18",
-    endDate: "2025-10-20",
+    startDate: "2026-10-30",
+    endDate: "2026-11-01",
   },
 } as const;
