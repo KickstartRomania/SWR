@@ -11,7 +11,7 @@ npx wrangler login
 ## 2. Create the D1 database
 
 ```bash
-npx wrangler d1 create swr-submissions
+npx wrangler d1 create sw_tg_jiu-submissions
 ```
 
 Add the returned database ID to `wrangler.toml`:
@@ -19,16 +19,16 @@ Add the returned database ID to `wrangler.toml`:
 ```toml
 [[d1_databases]]
 binding = "DB"
-database_name = "swr-submissions"
-database_id = "PASTE_DATABASE_ID_HERE"
+database_name = "sw_tg_jiu-submissions"
+database_id = "65091628-8989-4c27-ac0a-1184b0299fc9"
 migrations_dir = "migrations"
 ```
 
 Apply the migration locally and remotely:
 
 ```bash
-npx wrangler d1 migrations apply swr-submissions --local
-npx wrangler d1 migrations apply swr-submissions --remote
+npx wrangler d1 migrations apply sw_tg_jiu-submissions --local
+npx wrangler d1 migrations apply sw_tg_jiu-submissions --remote
 ```
 
 ## 3. Create the Turnstile widget
@@ -59,7 +59,7 @@ npm run preview
 Submit one Târgu Jiu registration and verify it locally:
 
 ```bash
-npx wrangler d1 execute swr-submissions --local --command "SELECT * FROM event_registrations;"
+npx wrangler d1 execute sw_tg_jiu-submissions --local --command "SELECT * FROM event_registrations;"
 ```
 
 ## 5. Deploy and verify
@@ -71,7 +71,7 @@ npm run deploy
 Submit one registration on the live Târgu Jiu page, then verify it remotely:
 
 ```bash
-npx wrangler d1 execute swr-submissions --remote --command "SELECT * FROM event_registrations ORDER BY created_at DESC LIMIT 5;"
+npx wrangler d1 execute sw_tg_jiu-submissions --remote --command "SELECT * FROM event_registrations ORDER BY created_at DESC LIMIT 5;"
 ```
 
 The API rejects duplicate email addresses for the same city. The `status` column supports `new`, `contacted`, `accepted`, and `rejected`.
