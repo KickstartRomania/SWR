@@ -2,8 +2,8 @@ export const EVENTS = {
   bucharest: {
     name: "Startup Weekend Bucharest",
     city: "Bucharest",
-    startDate: "2026-10-16",
-    endDate: "2026-10-18",
+    startDate: "2026-10-09",
+    endDate: "2026-10-11",
     location: "Nova",
     address: "Strada Academiei 28-30",
     googleMapsUrl: "https://share.google/CISroZY1ZlhDDfoMF",

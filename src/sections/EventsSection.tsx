@@ -24,7 +24,7 @@ export function EventsSection() {
       location: "Nova",
       hasDiffUrl: true,
       slug: "https://startupweekendbucharest.com/",
-      date: "16-18",
+      date: "9-11",
       month: "October",
       color: "bg-sw-navy",
       rotation: 8,
