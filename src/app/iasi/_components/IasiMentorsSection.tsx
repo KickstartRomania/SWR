@@ -19,6 +19,18 @@ const mentors: Mentor[] = [
     image: "/images/constanta/mentors/cosmin-pirvu.png",
     linkedIn: "https://www.linkedin.com/in/cosminpirvu/",
   },
+  {
+    name: "Roxana Botez",
+    company: "Leadership Coach",
+    image: "/images/iasi/mentors/roxana-botez.jpg",
+    linkedIn: "https://www.linkedin.com/in/roxana-botez-b0408b11/",
+  },
+  {
+    name: "Rares Chelmus",
+    company: "Mental Coach, The Upgrade",
+    image: "/images/iasi/mentors/rares-chelmus.jpg",
+    linkedIn: "https://www.linkedin.com/in/rares-chelmus/",
+  },
 ];
 
 const LinkedInIcon = () => (
