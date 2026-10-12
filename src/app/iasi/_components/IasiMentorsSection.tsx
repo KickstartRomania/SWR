@@ -15,7 +15,7 @@ type Mentor = {
 const mentors: Mentor[] = [
   {
     name: "Cosmin Pirvu",
-    company: "Techstars Startup Weekend Facilitator",
+    company: "GTM Engineer, Veridion",
     image: "/images/constanta/mentors/cosmin-pirvu.png",
     linkedIn: "https://www.linkedin.com/in/cosminpirvu/",
   },
@@ -30,6 +30,24 @@ const mentors: Mentor[] = [
     company: "Mental Coach, The Upgrade",
     image: "/images/iasi/mentors/rares-chelmus.jpg",
     linkedIn: "https://www.linkedin.com/in/rares-chelmus/",
+  },
+  {
+    name: "Mihai Mircea Costea",
+    company: "IT Delivery Director, Cegeka",
+    image: "/images/iasi/mentors/mihai-mircea-costea.jpg",
+    linkedIn: "https://www.linkedin.com/in/mihai-mircea-costea/",
+  },
+  {
+    name: "Mircea Serediuc",
+    company: "Co-founder, Narrio",
+    image: "/images/iasi/mentors/mircea-serediuc.jpg",
+    linkedIn: "https://www.linkedin.com/in/mirceaserediuc/",
+  },
+  {
+    name: "Florin Cardasim",
+    company: "Founder, Aegis",
+    image: "/images/iasi/mentors/florin-cardasim.jpg",
+    linkedIn: "https://www.linkedin.com/in/cardasim/",
   },
 ];
 
