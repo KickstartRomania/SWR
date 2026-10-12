@@ -49,6 +49,12 @@ const mentors: Mentor[] = [
     image: "/images/iasi/mentors/florin-cardasim.jpg",
     linkedIn: "https://www.linkedin.com/in/cardasim/",
   },
+  {
+    name: "Ionut Maxim",
+    company: "Digital Product Designer, The Digital Vitamins",
+    image: "/images/iasi/mentors/ionut-maxim.jpg",
+    linkedIn: "https://www.linkedin.com/in/ionutmaxim/",
+  },
 ];
 
 const LinkedInIcon = () => (
