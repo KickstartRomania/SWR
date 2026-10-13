@@ -55,6 +55,12 @@ const mentors: Mentor[] = [
     image: "/images/iasi/mentors/ionut-maxim.jpg",
     linkedIn: "https://www.linkedin.com/in/ionutmaxim/",
   },
+  {
+    name: "Teodor Simionescu",
+    company: "Software & Product, Bitdefender",
+    image: "/images/iasi/mentors/teodor-simionescu.jpg",
+    linkedIn: "https://www.linkedin.com/in/teodor-simionescu/",
+  },
 ];
 
 const LinkedInIcon = () => (
