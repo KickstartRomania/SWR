@@ -12,6 +12,3 @@ binding = "DB"
 database_name = "sw_tg_jiu-submissions"
 database_id = "65091628-8989-4c27-ac0a-1184b0299fc9"
 migrations_dir = "migrations"
-
-[[custom_domains]]
-pattern = "startupweekendromania.com"
