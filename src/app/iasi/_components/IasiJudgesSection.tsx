@@ -18,6 +18,12 @@ const judges: Judge[] = [
     company: "AI Implementation Strategist, Bonsai Labs",
     image: "/images/iasi/mentors/bogdan-chebac.jpg",
   },
+  {
+    name: "Tudor-Mihai Tarta",
+    company: "Software Tester, Continental",
+    image: "/images/iasi/mentors/tudor-mihai-tarta.jpg",
+    linkedIn: "https://www.linkedin.com/in/tartatudor-mihai/",
+  },
 ];
 
 const LinkedInIcon = () => (
