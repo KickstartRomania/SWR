@@ -35,8 +35,8 @@ export const EVENTS = {
   oradea: {
     name: "Startup Weekend Oradea",
     city: "Oradea",
-    startDate: "2025-10-18",
-    endDate: "2025-10-20",
+    startDate: "2025-03-14",
+    endDate: "2025-03-16",
   },
   "targu-jiu": {
     name: "Startup Weekend Târgu Jiu",
