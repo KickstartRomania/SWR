@@ -116,13 +116,16 @@ export function IasiHeroSection() {
         <motion.span variants={itemVariants} className="font-hand text-2xl md:text-3xl text-sw-blue mb-4 rotate-[-2deg]">
           Next event: 16-18 October 2026
         </motion.span>
-        <motion.span
+        <motion.a
           variants={itemVariants}
-          className="font-hand text-xl md:text-2xl text-foreground/60 mb-8 flex items-center gap-2 rotate-[1deg]"
+          href="https://share.google/iEInuHmLYOgywXeO0"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-hand text-xl md:text-2xl text-foreground/60 mb-8 hover:text-sw-blue transition-colors flex items-center gap-2 rotate-[1deg]"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-          Venue announced soon
-        </motion.span>
+          FabLab Iasi, Strada Randunica 2
+        </motion.a>
 
         <h1 className="font-heading font-bold text-5xl md:text-7xl lg:text-8xl leading-[1.1] md:leading-[1.1] tracking-tight max-w-4xl relative z-10">
           <motion.div variants={textBlurVariants} className="inline-block">

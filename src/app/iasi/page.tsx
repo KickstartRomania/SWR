@@ -39,6 +39,8 @@ export default function IasiPage() {
         startDate={event.startDate}
         endDate={event.endDate}
         location={event.location}
+        address={event.address}
+        googleMapsUrl={event.googleMapsUrl}
         description="Join Startup Weekend Iasi! Build a startup in 54 hours. Developers, designers, and idea people come together to launch something real."
       />
       <Navbar />

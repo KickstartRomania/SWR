@@ -36,7 +36,7 @@ export function EventsSection() {
     },
     {
       city: "Iasi",
-      location: "Venue announced soon",
+      location: "FabLab Iasi",
       slug: "iasi",
       date: "16-18",
       month: "October",
