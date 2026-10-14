@@ -11,8 +11,8 @@ export const EVENTS = {
   cluj: {
     name: "Startup Weekend Cluj",
     city: "Cluj-Napoca",
-    startDate: "2025-10-18",
-    endDate: "2025-10-20",
+    startDate: "2025-11-21",
+    endDate: "2025-11-23",
   },
   constanta: {
     name: "Startup Weekend Constanta",
