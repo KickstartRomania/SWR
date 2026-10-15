@@ -121,7 +121,7 @@ export function Navbar() {
         </div>
 
         {/* Past Events */}
-        <Link href="/#past-events" className="relative group font-heading hover:-rotate-2 transition-transform inline-block">
+        <Link href="/past-events" className="relative group font-heading hover:-rotate-2 transition-transform inline-block">
           <span className="relative z-10">Past Events</span>
           <SquigglyLine />
         </Link>
@@ -248,7 +248,7 @@ export function Navbar() {
               <div className="h-0 border-b-[3px] border-dashed border-black/20 my-4 w-full" />
 
               <Link
-                href="/#past-events"
+                href="/past-events"
                 className="px-4 py-3 hover:bg-sw-blue-washed border-2 border-transparent hover:border-black rounded-xl transition-all font-heading text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
