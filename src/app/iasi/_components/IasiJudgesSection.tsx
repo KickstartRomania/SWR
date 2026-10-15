@@ -7,9 +7,9 @@ const judges: Person[] = [
     image: "/images/iasi/mentors/bogdan-chebac.jpg",
   },
   {
-    name: "Tudor-Mihai Tarta",
-    company: "Software Tester, Continental",
-    image: "/images/iasi/mentors/tudor-mihai-tarta.jpg",
+    name: "Tudor-Mihai Tarța",
+    company: "Founder, Felie de meserie",
+    image: "/images/iasi/mentors/tudor-mihai-tarta-founder.jpg",
     linkedIn: "https://www.linkedin.com/in/tartatudor-mihai/",
   },
   {
