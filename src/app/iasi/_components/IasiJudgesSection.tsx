@@ -12,6 +12,12 @@ const judges: Person[] = [
     image: "/images/iasi/mentors/tudor-mihai-tarta.jpg",
     linkedIn: "https://www.linkedin.com/in/tartatudor-mihai/",
   },
+  {
+    name: "Florin Asavoaie",
+    company: "Head of Technology, Digitail",
+    image: "/images/iasi/mentors/florin-asavoaie.jpg",
+    linkedIn: "https://www.linkedin.com/in/florin-asavoaie/",
+  },
 ];
 
 export function IasiJudgesSection() {
