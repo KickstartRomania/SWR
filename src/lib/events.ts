@@ -28,9 +28,9 @@ export const EVENTS = {
     city: "Iasi",
     startDate: "2026-10-17",
     endDate: "2026-10-18",
-    location: "FabLab Iasi",
-    address: "Strada Randunica 2",
-    googleMapsUrl: "https://share.google/iEInuHmLYOgywXeO0",
+    location: "Fab Central",
+    address: "Strada Anastasie Panu 27, 700023 Iași",
+    googleMapsUrl: "https://maps.app.goo.gl/cokyNsSTLuD8JoNK6",
   },
   oradea: {
     name: "Startup Weekend Oradea",

@@ -7,7 +7,7 @@ export function EventsSection() {
   const tickets = [
     {
       city: "Iasi",
-      location: "FabLab Iasi",
+      location: "Fab Central",
       slug: "iasi",
       hasDiffUrl: false,
       date: "17-18",
