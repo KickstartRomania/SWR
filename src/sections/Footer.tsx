@@ -11,13 +11,13 @@ const CITIES = [
 
 const MAIN_LINKS = [
   { name: "Home", href: "/" },
-  { name: "Past Events", href: "/#past-events" },
+  { name: "Past Events", href: "/past-events" },
   { name: "Contact", href: "/contact" },
   { name: "Mentors", href: "/mentors" },
   { name: "Host", href: "/host" },
 ] as const;
 
-export const Footer = () => {
+export const Footer = ({ tagline = "54 hours to build a startup. No fluff, just makers." }: { tagline?: string }) => {
   return (
     <footer className="w-full bg-background border-t-[4px] border-foreground relative mt-24 overflow-hidden z-10 flex flex-col">
 
@@ -56,7 +56,7 @@ export const Footer = () => {
             </h2>
 
             <p className="font-hand text-3xl md:text-4xl text-foreground font-bold mt-12 md:mt-16 -rotate-2 max-w-sm leading-relaxed">
-              54 hours to build a startup. No fluff, just makers.
+              {tagline}
             </p>
 
             <div className="mt-14 flex items-center gap-6">

@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const FooterCTASection = () => {
+const DEFAULT_DESCRIPTION =
+  "At Startup Weekend, developers, designers, marketers, and future founders come together to build something real. Pitch on Friday, build all weekend, and present your startup on Sunday.";
+
+export const FooterCTASection = ({ description = DEFAULT_DESCRIPTION }: { description?: string }) => {
   return (
     <section className="w-full relative bg-white pt-10">
       
@@ -16,7 +19,7 @@ export const FooterCTASection = () => {
           </h2>
           
           <p className="font-medium text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl">
-            At Startup Weekend, developers, designers, marketers, and future founders come together to build something real. Pitch on Friday, build all weekend, and present your startup on Sunday.
+            {description}
           </p>
 
         </div>

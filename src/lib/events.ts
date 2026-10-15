@@ -26,7 +26,7 @@ export const EVENTS = {
   iasi: {
     name: "Startup Weekend Iasi",
     city: "Iasi",
-    startDate: "2026-10-16",
+    startDate: "2026-10-17",
     endDate: "2026-10-18",
     location: "FabLab Iasi",
     address: "Strada Randunica 2",

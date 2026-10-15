@@ -114,7 +114,7 @@ export function IasiHeroSection() {
         className="flex flex-col items-center z-10 w-full"
       >
         <motion.span variants={itemVariants} className="font-hand text-2xl md:text-3xl text-sw-blue mb-4 rotate-[-2deg]">
-          Next event: 16-18 October 2026
+          Next event: 17-18 October 2026
         </motion.span>
         <motion.a
           variants={itemVariants}

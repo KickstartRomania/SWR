@@ -10,13 +10,15 @@ export type AgendaItem = {
 };
 
 export type CityAgenda = {
-  Friday: AgendaItem[];
+  /** Omit for two-day events that start on Saturday. */
+  Friday?: AgendaItem[];
   Saturday: AgendaItem[];
   Sunday: AgendaItem[];
 };
 
 export function CityAgendaSection({ agenda }: { agenda: CityAgenda }) {
-  const [activeTab, setActiveTab] = useState<keyof CityAgenda>("Friday");
+  const days = (Object.keys(agenda) as Array<keyof CityAgenda>).filter((day) => agenda[day]);
+  const [activeTab, setActiveTab] = useState<keyof CityAgenda>(days[0]);
 
   return (
     <section className="w-full bg-[#fcfcfc] py-16 md:py-20 relative overflow-hidden">
@@ -34,7 +36,7 @@ export function CityAgendaSection({ agenda }: { agenda: CityAgenda }) {
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {(Object.keys(agenda) as Array<keyof CityAgenda>).map((day) => (
+          {days.map((day) => (
             <button
               key={day}
               onClick={() => setActiveTab(day)}
@@ -60,7 +62,7 @@ export function CityAgendaSection({ agenda }: { agenda: CityAgenda }) {
               className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 items-start"
             >
               {(() => {
-                const items = agenda[activeTab];
+                const items = agenda[activeTab] ?? [];
                 const half = Math.ceil(items.length / 2);
                 const columns = [items.slice(0, half), items.slice(half)];
 

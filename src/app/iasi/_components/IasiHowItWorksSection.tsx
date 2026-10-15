@@ -81,7 +81,7 @@ export const IasiHowItWorksSection = () => {
     {
       id: "06",
       title: "Demo Day",
-      description: "Pitch to a panel of judges and the community. Celebrate what you've built in just 54 hours.",
+      description: "Pitch to a panel of judges and the community. Celebrate what you've built in just one weekend.",
       tags: ["Final Pitch", "Judging", "Celebration"],
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
@@ -110,7 +110,7 @@ export const IasiHowItWorksSection = () => {
             </svg>
           </h2>
           <p className="font-medium text-xl text-foreground/70 max-w-2xl mx-auto mt-8">
-            From meeting strangers on Friday to pitching a startup together on Sunday.
+            From meeting strangers on Saturday morning to pitching a startup together on Sunday.
           </p>
         </div>
 

@@ -10,7 +10,7 @@ export function EventsSection() {
       location: "FabLab Iasi",
       slug: "iasi",
       hasDiffUrl: false,
-      date: "16-18",
+      date: "17-18",
       month: "October",
       color: "bg-sw-blue",
       rotation: -6,

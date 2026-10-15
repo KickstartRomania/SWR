@@ -55,7 +55,7 @@ export function IasiContactSection() {
 
           <h3 className="font-heading font-bold text-4xl mb-6 tracking-tight">Ready to build?</h3>
           <p className="text-xl text-foreground/70 mb-10 max-w-sm leading-relaxed">
-            Join us in Iasi for a 54-hour startup marathon. Choose the ticket that fits you.
+            Join us in Iasi for a weekend-long startup marathon. Choose the ticket that fits you.
           </p>
 
           <div className="w-full flex flex-col gap-4">
