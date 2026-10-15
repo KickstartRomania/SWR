@@ -26,7 +26,6 @@ export function IasiJudgesSection() {
       title="Meet your judges"
       subtitle="Industry experts who will evaluate your final pitches"
       people={judges}
-      teaser={{ title: "More jury members", subtitle: "announced soon" }}
     />
   );
 }
