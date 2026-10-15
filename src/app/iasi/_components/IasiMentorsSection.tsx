@@ -43,6 +43,12 @@ const mentors: Person[] = [
     image: "/images/iasi/mentors/teodor-simionescu.jpg",
     linkedIn: "https://www.linkedin.com/in/teodor-simionescu/",
   },
+  {
+    name: "Florin Dobinciuc",
+    company: "Full Stack Engineer, Cognizant",
+    image: "/images/iasi/mentors/florin-dobinciuc.jpg",
+    linkedIn: "https://www.linkedin.com/in/florin-dobinciuc/",
+  },
 ];
 
 export function IasiMentorsSection() {
