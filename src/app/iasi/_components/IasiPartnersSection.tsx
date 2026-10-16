@@ -10,7 +10,6 @@ type Logo = {
 };
 
 const organizers: Logo[] = [
-  { name: "Techstars Startup Weekend Romania", src: "/images/iasi/partners/startup-weekend-romania.png", href: "https://startupweekendromania.com", width: 1204, height: 579 },
   { name: "Kickstart Romania", src: "/images/iasi/partners/kickstart-romania.png", href: "https://kickstartromania.com", width: 893, height: 274 },
   { name: "Fondatori din viitor", src: "/images/iasi/partners/fondatori-din-viitor.png", href: "https://gggg.ro/", width: 1552, height: 112 },
 ];
@@ -21,22 +20,24 @@ const supporters: Logo[] = [
   { name: "Devin", src: "/images/iasi/partners/devin.png", href: "https://devin.ai", width: 1600, height: 425 },
 ];
 
-// Give every logo the same visual area, so a wide wordmark and a compact
-// mark read at a similar size instead of one dwarfing the other.
-const LOGO_AREA = 12000;
+// Give every logo in a row the same visual area, so a wide wordmark and a
+// compact mark read at a similar size instead of one dwarfing the other.
+// Organizers sit a step smaller than sponsors.
+const SUPPORTER_AREA = 12000;
+const ORGANIZER_AREA = 6500;
 
-function displayWidth({ width, height }: Logo) {
-  return Math.round(Math.sqrt(LOGO_AREA * (width / height)));
+function displayWidth({ width, height }: Logo, area: number) {
+  return Math.round(Math.sqrt(area * (width / height)));
 }
 
-function LogoRow({ label, logos }: { label: string; logos: Logo[] }) {
+function LogoRow({ label, logos, area }: { label: string; logos: Logo[]; area: number }) {
   return (
     <div className="w-full flex flex-col items-center">
       <p className="font-hand text-xl md:text-2xl text-foreground/80 mb-10 -rotate-1 relative z-10">{label}</p>
       <div className="w-full max-w-5xl px-6 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-10 sm:gap-16 md:gap-20">
         {logos.map((logo) => {
           const image = <Image src={logo.src} alt={logo.name} width={logo.width} height={logo.height} className="w-full h-auto" />;
-          const style = { width: displayWidth(logo) };
+          const style = { width: displayWidth(logo, area) };
           return logo.href ? (
             <a
               key={logo.name}
@@ -74,8 +75,8 @@ export function IasiPartnersSection() {
         </svg>
       </div>
 
-      <LogoRow label="Organized by" logos={organizers} />
-      <LogoRow label="Supported by" logos={supporters} />
+      <LogoRow label="Supported by" logos={supporters} area={SUPPORTER_AREA} />
+      <LogoRow label="Organized by" logos={organizers} area={ORGANIZER_AREA} />
     </section>
   );
 }
