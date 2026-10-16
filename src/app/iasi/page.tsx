@@ -72,9 +72,9 @@ export default function IasiPage() {
       <IasiWhatIsSection />
       <IasiHowItWorksSection />
       <IasiAgendaSection />
+      <IasiPartnersSection />
       <IasiMentorsSection />
       <IasiJudgesSection />
-      <IasiPartnersSection />
       <IasiContactSection />
       <FAQSection faqs={IASI_FAQS} />
       <FooterCTASection description="At Startup Weekend, developers, designers, marketers, and future founders come together to build something real. Pitch on Saturday morning, build all day, and present your startup on Sunday." />
