@@ -63,7 +63,6 @@ export function IasiMentorsSection() {
       title="Meet your mentors"
       subtitle="Expert guidance to help you build and validate your idea"
       people={mentors}
-      teaser={{ title: "More mentors", subtitle: "announced soon" }}
     />
   );
 }
