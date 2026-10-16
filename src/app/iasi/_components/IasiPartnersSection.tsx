@@ -63,7 +63,7 @@ function LogoRow({ label, logos, area }: { label: string; logos: Logo[]; area: n
 
 export function IasiPartnersSection() {
   return (
-    <section className="w-full bg-white border-b-[3px] border-foreground py-20 relative overflow-hidden flex flex-col items-center gap-16">
+    <section className="w-full bg-white py-20 relative overflow-hidden flex flex-col items-center gap-16">
       <div className="absolute -top-4 left-4 md:left-10">
         <svg width="40" height="40" viewBox="0 0 50 50" fill="none" className="text-sw-blue opacity-50 rotate-12">
           <path d="M25 5 L28 20 L45 25 L28 30 L25 45 L22 30 L5 25 L22 20 Z" fill="currentColor" />
