@@ -1,14 +1,68 @@
 import Image from "next/image";
 
-const partners = [
-  { name: "Stripe", logo: "/images/iasi/partners/stripe.png", href: "https://stripe.com" },
-  { name: "Cognition", logo: "/images/iasi/partners/cognition.png", href: "https://cognition.ai" },
-  { name: "Devin", logo: "/images/iasi/partners/devin.png", href: "https://devin.ai" },
+type Logo = {
+  name: string;
+  src: string;
+  href?: string;
+  /** Intrinsic size of the trimmed logo file. */
+  width: number;
+  height: number;
+};
+
+const organizers: Logo[] = [
+  { name: "Techstars Startup Weekend Romania", src: "/images/iasi/partners/startup-weekend-romania.png", href: "https://startupweekendromania.com", width: 1204, height: 579 },
+  { name: "Kickstart Romania", src: "/images/iasi/partners/kickstart-romania.png", href: "https://kickstartromania.com", width: 893, height: 274 },
+  { name: "Fondatori din viitor", src: "/images/iasi/partners/fondatori-din-viitor.png", href: "https://gggg.ro/", width: 1552, height: 112 },
 ];
+
+const supporters: Logo[] = [
+  { name: "Stripe", src: "/images/iasi/partners/stripe.png", href: "https://stripe.com", width: 1280, height: 533 },
+  { name: "Cognition", src: "/images/iasi/partners/cognition.png", href: "https://cognition.ai", width: 1600, height: 309 },
+  { name: "Devin", src: "/images/iasi/partners/devin.png", href: "https://devin.ai", width: 1600, height: 425 },
+];
+
+// Give every logo the same visual area, so a wide wordmark and a compact
+// mark read at a similar size instead of one dwarfing the other.
+const LOGO_AREA = 12000;
+
+function displayWidth({ width, height }: Logo) {
+  return Math.round(Math.sqrt(LOGO_AREA * (width / height)));
+}
+
+function LogoRow({ label, logos }: { label: string; logos: Logo[] }) {
+  return (
+    <div className="w-full flex flex-col items-center">
+      <p className="font-hand text-xl md:text-2xl text-foreground/80 mb-10 -rotate-1 relative z-10">{label}</p>
+      <div className="w-full max-w-5xl px-6 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-10 sm:gap-16 md:gap-20">
+        {logos.map((logo) => {
+          const image = <Image src={logo.src} alt={logo.name} width={logo.width} height={logo.height} className="w-full h-auto" />;
+          const style = { width: displayWidth(logo) };
+          return logo.href ? (
+            <a
+              key={logo.name}
+              href={logo.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={logo.name}
+              className="block max-w-full transition-transform hover:scale-105"
+              style={style}
+            >
+              {image}
+            </a>
+          ) : (
+            <div key={logo.name} className="max-w-full" style={style}>
+              {image}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 export function IasiPartnersSection() {
   return (
-    <section className="w-full bg-white border-b-[3px] border-foreground py-20 relative overflow-hidden flex flex-col items-center">
+    <section className="w-full bg-white border-b-[3px] border-foreground py-20 relative overflow-hidden flex flex-col items-center gap-16">
       <div className="absolute -top-4 left-4 md:left-10">
         <svg width="40" height="40" viewBox="0 0 50 50" fill="none" className="text-sw-blue opacity-50 rotate-12">
           <path d="M25 5 L28 20 L45 25 L28 30 L25 45 L22 30 L5 25 L22 20 Z" fill="currentColor" />
@@ -20,24 +74,8 @@ export function IasiPartnersSection() {
         </svg>
       </div>
 
-      <p className="font-hand text-xl md:text-2xl text-foreground/80 mb-10 -rotate-1 relative z-10">
-        Supported by
-      </p>
-
-      <div className="w-full max-w-5xl px-6 flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-16 md:gap-24">
-        {partners.map((partner) => (
-          <a
-            key={partner.name}
-            href={partner.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={partner.name}
-            className="relative h-14 md:h-16 w-44 md:w-56 flex-shrink-0 transition-transform hover:scale-105"
-          >
-            <Image src={partner.logo} alt={partner.name} fill className="object-contain" />
-          </a>
-        ))}
-      </div>
+      <LogoRow label="Organized by" logos={organizers} />
+      <LogoRow label="Supported by" logos={supporters} />
     </section>
   );
 }
