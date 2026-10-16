@@ -8,6 +8,12 @@ const mentors: Person[] = [
     linkedIn: "https://www.linkedin.com/in/cosminpirvu/",
   },
   {
+    name: "Dan Popescu",
+    company: "Vice Președinte, Asociația Fondatori din viitor",
+    image: "/images/iasi/mentors/dan-popescu.jpg",
+    linkedIn: "https://www.linkedin.com/in/antreprenor-dan-popescu/",
+  },
+  {
     name: "Roxana Botez",
     company: "Leadership Coach",
     image: "/images/iasi/mentors/roxana-botez.jpg",
