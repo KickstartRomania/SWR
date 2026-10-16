@@ -11,6 +11,7 @@ import { IasiHowItWorksSection } from "./_components/IasiHowItWorksSection";
 import { IasiAgendaSection } from "./_components/IasiAgendaSection";
 import { IasiMentorsSection } from "./_components/IasiMentorsSection";
 import { IasiJudgesSection } from "./_components/IasiJudgesSection";
+import { IasiPartnersSection } from "./_components/IasiPartnersSection";
 import { IasiContactSection } from "./_components/IasiContactSection";
 import { DEFAULT_FAQS, type FAQ } from "@/lib/faqs";
 import { SITE_URL } from "@/lib/constants";
@@ -73,6 +74,7 @@ export default function IasiPage() {
       <IasiAgendaSection />
       <IasiMentorsSection />
       <IasiJudgesSection />
+      <IasiPartnersSection />
       <IasiContactSection />
       <FAQSection faqs={IASI_FAQS} />
       <FooterCTASection description="At Startup Weekend, developers, designers, marketers, and future founders come together to build something real. Pitch on Saturday morning, build all day, and present your startup on Sunday." />
