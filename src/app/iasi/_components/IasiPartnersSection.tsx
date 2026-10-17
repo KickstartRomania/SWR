@@ -19,13 +19,14 @@ const supporters: Logo[] = [
   { name: "Cognition", src: "/images/iasi/partners/cognition.png", href: "https://cognition.ai", width: 1600, height: 309 },
   { name: "Devin", src: "/images/iasi/partners/devin.png", href: "https://devin.ai", width: 1600, height: 425 },
   { name: "Featherless", src: "/images/iasi/partners/featherless-logo.png", href: "https://featherless.ai", width: 1631, height: 336 },
+  { name: "FabLab Iasi", src: "/images/iasi/partners/fablab-iasi.png", width: 378, height: 146 },
 ];
 
 // Give every logo in a row the same visual area, so a wide wordmark and a
 // compact mark read at a similar size instead of one dwarfing the other.
 // Organizers sit a step smaller than sponsors.
-const SUPPORTER_AREA = 12000;
-const ORGANIZER_AREA = 6500;
+const SUPPORTER_AREA = 8500;
+const ORGANIZER_AREA = 5000;
 
 function displayWidth({ width, height }: Logo, area: number) {
   return Math.round(Math.sqrt(area * (width / height)));
@@ -35,7 +36,7 @@ function LogoRow({ label, logos, area }: { label: string; logos: Logo[]; area: n
   return (
     <div className="w-full flex flex-col items-center">
       <p className="font-hand text-xl md:text-2xl text-foreground/80 mb-10 -rotate-1 relative z-10">{label}</p>
-      <div className="w-full max-w-6xl px-6 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-10 sm:gap-12 md:gap-16">
+      <div className="w-full max-w-6xl px-6 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-10 sm:gap-10 md:gap-12">
         {logos.map((logo) => {
           const image = <Image src={logo.src} alt={logo.name} width={logo.width} height={logo.height} className="w-full h-auto" />;
           const style = { width: displayWidth(logo, area) };
