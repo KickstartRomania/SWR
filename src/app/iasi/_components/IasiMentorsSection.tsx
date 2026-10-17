@@ -55,6 +55,12 @@ const mentors: Person[] = [
     image: "/images/iasi/mentors/florin-dobinciuc.jpg",
     linkedIn: "https://www.linkedin.com/in/florin-dobinciuc/",
   },
+  {
+    name: "Paul Malageac",
+    company: "SAP Delivery Manager",
+    image: "/images/iasi/mentors/paul-malageac.jpg",
+    linkedIn: "https://www.linkedin.com/in/malageac-paul-mihai-a6a8049/",
+  },
 ];
 
 export function IasiMentorsSection() {
