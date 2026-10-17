@@ -14,7 +14,7 @@ const agenda: CityAgenda = {
     { time: "17:00 – 18:30", title: "Build & Validate", description: "Keep developing your solution and testing what matters." },
     { time: "18:30 – 19:30", title: "Dinner", description: "Refuel before the evening session." },
     { time: "19:30 – 20:00", title: "Pitching Workshop", description: "Cosmin Pirvu from Veridion shows how to turn your weekend's work into a clear, compelling pitch." },
-    { time: "20:00 – Late", title: "Keep Building", description: "Develop your prototype, refine your business model, and start on your presentation." },
+    { time: "20:00 – 23:00", title: "Keep Building", description: "Develop your prototype, refine your business model, and start on your presentation." },
   ],
   Sunday: [
     { time: "09:00 – 09:30", title: "Breakfast", description: "Start the final day together and align on what still needs to get done." },
